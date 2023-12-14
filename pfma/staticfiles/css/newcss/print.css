@@ -1,0 +1,46 @@
+body {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10pt;
+}
+
+.DEBUG,
+.warning-nojs,
+.spamfilter,
+.hgroup,
+#menu_accessibilite,
+#logos,
+#menuOutils,
+#logosEurope,
+#langages,
+#searchbox,
+.btnMenu, 
+.checkbox-toggle,
+#menuPrincipal,
+.Search,
+.contientHamburger,
+#menuAriane,
+.sf-menu,
+.menuMobile,
+.menu,
+#menuArborescence,
+#menuArborescenceMobile,
+p.attr_date_publication.debut_page,
+#filtre,
+#piedPage,
+#mm-menuPrincipal,
+.mm-sronly {
+    display: none;
+}
+
+a {
+	text-decoration:none;
+	color:#000;
+}
+
+img {
+	float:right;
+	margin:0 0 15pt 15pt;
+}
+#logo img {
+	float:none;
+}

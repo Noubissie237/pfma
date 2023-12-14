@@ -1,0 +1,473 @@
+{%load static %}
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]><html lang="fr-FR" class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html lang="fr-FR" class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html lang="fr-FR" class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html lang="fr-FR" class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="fr-FR" class="no-js">
+<!--<![endif]-->
+
+<head>
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="alternate" type="application/rss+xml" title="Flux des actualités du Projet MARIGO" href="RSS/actualites.rss" />
+    <title> Intervention</title>
+    <link rel="shortcut icon" href="{% static 'img/log1.ico' %}" type="image/x-icon">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/newcss/general.css' %}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/newcss/print.css' %}" media="print" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/newcss/font-awesome.min.css' %}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css//newcss/mmenu.css' %}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/newcss/tiny-slider.css' %}" media="screen" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css.map' %}">
+    
+</head>
+
+<body data-node="4536" data-langue="fr-FR" data-classe="crd_actualite" data-nodeid="4536" class="crd_actualite mep_standard not_connected"data-path="/1/2/105/4344/3991/4536/" itemscope itemtype="http://schema.org/WebPage">       
+        
+    <!-- START blocs/accessiblite.tpl -->
+    <ul id="menu_accessibilite">
+        <li><a href="#contenu">Aller au contenu de la page</a></li>
+        <li><a href="#sitenav">Aller au menu de navigation</a></li>
+        <li><a href="#basdepage">Aller au bas de page</a></li>
+    </ul>
+    <!-- END blocs/accessiblite.tpl -->
+
+    <div id="container" class="container-fluid">
+        <header class="row"> 
+            <!-- BEGIN blocs/bloc_titresite.tpl -->
+            <div id="titre_site"> 
+              <div class="hgroup" title="Projet MARIGO">
+                <h1><a href="/">Projet MARIGO</a></h1>
+                <h2><a href="/">Culture du riz périurbain au Cameroun</a></h2>
+              </div>
+          
+              <div id="logo">
+                <a href="../" style="text-decoration: none;">
+                  <img src="{% static 'img/logo.jpg'%}" alt="" style="width: 15rem;">
+                </a>
+                <span class="TitleSite">
+                  Plateforme Multi-Acteurs de la Chaîne de Valeur riz au Cameroun
+                </span>
+              </div>
+            </div>
+            <!-- END blocs/bloc_titresite.tpl -->
+        
+            <span style="margin-left: 100rem;">
+              <button type="button" title="rechercher" style="border: 1px solid #aaa">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" color="#0012ba" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg>
+              </button>
+          
+              <a href="/inscription" title="Connexion/Inscription" style="text-decoration: none; margin-left: 2rem;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                </svg>
+                <span style="font-size: 18px;">Connexion/Inscription</span>
+              </a>
+            </span>
+
+            <p class="menu hidden-md hidden-lg">
+                <a class="btnMenu" href="#menuArborescenceMobile"></a>
+                    <span>MENU</span>
+            </p>
+        </header>
+
+        <nav id="menuRubriques" class="hidden-xs hidden-sm">
+            <ul class="sf-menu menudepth_1 mon" >          
+              <li class="pos_4 courant">
+                <a title="Accueil" href="../">
+                  <span class="lig1">ACCUEIL</span>
+                </a>
+                <ul class="menudepth_2">
+                  <li>
+                    <a href="../#descriptif"><span class="lig1">Descriptif du Projet</span></a>
+                  </li>
+                </ul>
+              </li>
+              
+              <li class="pos_2">
+                <a href="">
+                  <span class="lig1">ACTEURS</span>
+                </a>
+      
+                <ul class="menudepth_3">
+      
+                  <li>
+                    <a href="/institutionnel"><span class="lig1">acteur institutionnel</span></a>
+                    <ul class="menudepth_2" style="background-color: #2d5140;">
+                    <li><a href="/institutionnel/#depMin"><span class="lig1">Departements ministériels</span></a></li>
+                    <li><a href="/institutionnel/#sstpg"><span class="lig1">Sociétés sous-tutelle & les projets programmes</span></a></li>
+                    <li><a href="/institutionnel/#ptf"><span class="lig1">Partenaires techniques & financiers (PTF)</span></a></li>
+                    <li><a href="/institutionnel/#snra"><span class="lig1">Système nationale de recherche agricole</span></a></li>
+                    </ul>    
+                  </li>
+
+                  <li>
+                    <a href="/direct"><span class="lig1">acteur direct</span></a>
+                    <ul class="menudepth_2" style="background-color: #2d5140;">
+                      <li><a href="/#producteur"><span class="lig1">Producteurs</span></a></li>
+                      <li><a href="/#transformateur"><span class="lig1">Transformateurs</span></a></li>
+                      <li><a href="/#distributeur"><span class="lig1">Distributeurs</span></a></li>
+                      <li><a href="/#consommateur"><span class="lig1">consommateurs</span></a></li>
+                    </ul>    
+                  </li>
+      
+                  <li> 
+                    <a href="/indirect">
+                      <span class="lig1">acteur indirect</span>
+                    </a>
+                    <ul class="menudepth_2" style="background-color: #2d5140;">
+                      <li><a href="/indirect/#presta"><span class="lig1">Prestataires des services de labour</span></a></li>
+                      <li><a href="/indirect/#etab"><span class="lig1">Etablissements financiers & banques</span></a></li>
+                    </ul>          
+                  </li>
+                </ul>
+              </li>
+                           
+              <li class="pos_3">
+                <a title="Les échanges" href="/inscription">
+                  <span class="lig1">ECHANGE</span>
+                </a>
+                
+                <ul class="menudepth_2">
+                  <li>
+                    <a href="/inscription">
+                      <span class="lig1">Forum</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/inscription">
+                      <span class="lig1">Video</span>
+                    </a>
+                  </li>
+      
+                </ul>
+              </li>
+                            
+              <li class="pos_4">
+                <a title="Le Système d'Informations sur le Riz" href="/general">
+                  <span class="lig1">S. I. R </span>
+                </a>
+                  
+                <ul class="menudepth_2">
+                  <li>
+                    <a href="/general">
+                      <span class="lig1">Informations Générales</span>
+                    </a>
+                  </li>
+      
+                  <li>
+                    <a href="/general">
+                      <span class="lig1">Informations Commerciales</span>
+                    </a>
+                  </li>
+      
+                  <li>
+                    <a href="/general">
+                      <span class="lig1">Informations Techniques</span>
+                    </a>
+                  </li>
+      
+                </ul>
+              </li>
+                                          
+              <li class="pos_5 pos_last">
+                <a title="La médiathèque" href="/mediatheque">
+                  <span class="lig1"> médiathèque</span>
+                </a>
+
+              </li>
+      
+              <li class="pos_5 pos_last">
+                <a title="La Bibliotheque" href="/bibliotheque"><span class="lig1"> Bibliotheque</span></a>          
+                <ul class="menudepth_2">
+                  <li>
+                    <a href="bibliotheque"><span class="lig1">Livre techniques</span></a>
+                  </li>
+                 </ul>
+              </li>
+      
+              <li>
+                <a href="/hand" >Hand in Hand</a>
+              </li>
+      
+            </ul>
+        </nav>
+
+        <nav id="menuArborescenceMobile" class="masqueMenu">
+            <ul class="menu menudepth_1">                          
+              <li class="pos_1">
+                <a title="Le projet" href="/le-projet">
+                  <span class="lig1">Le projet</span>
+                </a>
+                   
+                <ul class="menudepth_2">
+                  <li>
+                    <a href="/le-projet/descriptif-du-projet"><span class="lig1">Descriptif du Projet</span></a>
+                  </li>
+                </ul>
+              </li>
+                          
+              <li class="pos_2">
+                <a title="Les partenaires et le bailleur" href="/les-partenaires-et-le-bailleur">
+                  <span class="lig1">Les partenaires et le bailleur</span>
+                </a>
+                  
+                <ul class="menudepth_2">
+                  <li>
+                    <a href="#">
+                      <span class="lig1">Institution publique</span>
+                    </a>
+                  </li>
+      
+                  <li>
+                    <a href="#">
+                      <span class="lig1">Institution privée</span>
+                    </a>
+                  </li>
+      
+                  <li>
+                    <a href="#">
+                      <span class="lig1">Oragnisation paysannes</span>
+                    </a>
+                  </li>
+      
+                  <li>
+                    <a href="#">
+                      <span class="lig1">Particuliers</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+                            
+              <li class="pos_3">
+                <a title="Les activités" href="/les-activites">
+                  <span class="lig1">Les activités</span>
+                </a>
+                 
+                <ul class="menudepth_2">
+                  <li>
+                    <a href="/les-activites/plateforme-multi-acteurs"><span class="lig1">Plateforme multi-acteurs</span></a>
+                  </li>
+      
+                  <li>
+                    <a href="/inscription"><span class="lig1">Diagnostic et évaluation</span></a>
+                  </li>
+      
+                  <li>
+                    <a href="/les-activites/sante-des-sols"><span class="lig1">Santé des sols</span></a>
+                  </li>
+      
+                  <li>
+                    <a href="/les-activites/sante-des-plantes"><span class="lig1">Santé des plantes</span></a>
+                  </li>
+      
+                  <li>
+                    <a href="/les-activites/conservation-transformation-qualite"><span class="lig1">Conservation, transformation, qualité</span></a>
+                  </li>
+      
+                  <li>
+                    <a href="/les-activites/formation-et-diffusion"><span class="lig1">Formation et diffusion</span></a>
+                  </li>
+      
+                </ul>
+              </li>
+                           
+              <li class="pos_4">
+                <a title="La communication du projet" href="/la-communication-du-projet"><span class="lig1">La communication du projet</span></a>
+                <ul class="menudepth_2">
+                  <li>
+                    <a href="/la-communication-du-projet/rapports"><span class="lig1">Rapports</span></a>
+                  </li>
+                  
+                  <li>
+                    <a href="/la-communication-du-projet/actualites"><span class="lig1">Actualités</span></a>
+                  </li>
+      
+                  <li>
+                    <a href="/la-communication-du-projet/support-de-communication"><span class="lig1">Support de communication</span></a>
+                  </li>
+                </ul>
+              </li>
+                                                         
+              <li class="pos_5 pos_last">
+                <a title="La médiathèque" href="/bibliotheque"><span class="lig1">La médiathèque</span></a>                 
+                <ul class="menudepth_2">
+                  <li>
+                    <a href=""><span class="lig1">Photos - WP1 plateforme multi-acteurs</span></a>
+                  </li>
+      
+                  <li>
+                    <a href=""><span class="lig1">Photos - WP2 Diagnostic et évaluation</span></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+        </nav>
+        
+        <nav id="menuAriane" class="row hidden-xs">
+            <p id="nav_ariane" class="breadcrumbs" itemprop="breadcrumb">
+                <span class="libelle">
+                    Vous êtes ici&nbsp;:
+                </span>
+
+                <span class="bc1">       
+                  <a href="../" title="Home">
+                      <span class="home">
+                          <span class="lig1">Home</span>
+                      </span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+                        <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z"/>
+                        <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z"/>
+                      </svg>
+                  </a>
+              </span>
+
+                <span class="path-separator">
+                    <span class="separator">
+                        &gt;
+                    </span>
+                </span>        
+
+                <span class="bc2">
+                      <a href="#"><span class="lig1">Accueil > </span></a>
+                </span>
+
+                <span class="path-separator">
+                    <span class="separator">
+                         &gt; 
+                    </span>
+                </span>        
+            
+                <span class="bc3">
+                      <a href="#"><span class="lig1">Descriptif du projet > </span></a>
+                </span>
+
+                <span class="path-separator">
+                    <span class="separator">
+                         &gt; 
+                    </span>
+                </span>   
+                
+                <span class="bc3">
+                    <a href="#"><span class="lig1">Zone d'intervention </span></a>
+              </span>
+      
+            </p>
+
+            <!-- END blocs/menu_ariane.tpl -->
+        </nav>
+        
+        <div id="main">
+            <div class="row">
+                <nav id="menuArborescence" class="col-xs-12 col-sm-2 hidden-xs hidden-sm">
+                    <ul class="menudepth_1">                                                           
+                        <li class="courant">
+                            <a href="#"><span class="lig1">Accueil</span></a> 
+                            <ul class="menudepth_2">
+                                <li class="courant">
+                                    <a href="#"><span class="lig1">Descriptif du projet</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <article id="contenu" class="col-xs-12 col-sm-9 col-md-7">  
+                    <h1 class="attr_name">
+                        <span class="lig1">ZONE D'INTERVENTION</span>  
+                    </h1>
+                    <!-- BEGIN blocs/bloc_module.tpl -->
+
+                    <div  class="crd_actualite full">
+                        <p class="attr_accroche">
+                            <span class="lig1">
+                              Le Cameroun, pays d’Afrique centrale situé au fond du golfe de Guinée, 475 442 km², se distingue par sa position stratégique, au carrefour de l’Afrique de l’Ouest et du Centre, à l’intersection des zones CEDEAO et CEMAC. Il partage plus de 1500 km de frontière avec le Nigeria, première économie d’Afrique. Du point de vue administratif, le Cameroun est subdivisé en 10 régions, 58 départements et 360 arrondissements tous regroupés en 5 zones agro écologiques  
+                            </span>  
+                        </p>
+
+                        <div class="attr_description">
+                            <p class=" text-justify">
+                              <ol>
+                                <li>
+                                  <strong>UNE POPULATION RAPIDEMENT CROISSANTE ET JEUNE</strong> 
+                                  <dl>
+                                    Pays le plus peuplé de la zone CEMAC et  phare de la sous-région, le Cameroun serait peuplé d’environ 35 millions d’habitants en 2030 avec un taux d’accroissement de 2,6% par an. Cette population est actuellement composée de 50,6% de femmes et se caractérise par son extrême jeunesse, avec un âge moyen proche de 22 ans ; les moins de 15 ans représentent 43,6% et la proportion de la population en âge de travailler (constituée des personnes de 15 – 64 ans) est de 53,5%. La taille moyenne d’un ménage est de 6 personnes. La main d’œuvre est donc abondante, jeune et relativement qualifiée, mais davantage attirée vers les grandes agglomérations où les opportunités socio-économiques apparaissent plus attrayantes.
+                                    Malgré de fortes incertitudes sur la situation géopolitique internationale, les perspectives économiques à court et moyen termes restent satisfaisantes. Le taux de croissance est estimé à 4,3% en 2023 et 4,5% en moyenne sur la période 2024-2025. L’inflation devrait continuer à se situer en 2023 au-dessus du seuil communautaire de 3% et revenir progressivement en dessous à moyen terme. La reprise économique Post COVID-19 de l’économie camerounaise a été contrainte par l’évolution inédite de l’inflation qui a réduit le pouvoir d’achat des ménages et accru les coûts de production des entreprises.
+                                  </dl>
+                                </li>
+
+                                <li>
+                                  <strong>UNE FORTE INCIDENCE DE LA PAUVRETÉ RURALE</strong>
+                                  <dl>
+                                    L’incidence de la pauvreté était estimée à 37,5% en 2014, contre 39,9% en 2007 (ECAM 4, INS). L’analyse de la pauvreté selon les régions et le milieu de résidence montrait que les producteurs ruraux constituaient le groupe socio-économique le plus exposé à la précarité et contribuaient à 66,1% à la pauvreté nationale. Le milieu rural, où réside près de 43,7% de la population totale, concentre 90% des personnes vivant en-dessous du seuil de pauvreté, c’est-à-dire avec moins de 931 FCFA par jour pour couvrir les besoins prioritaires de base d’un adulte (ECAM 4, INS). 
+                                  </dl>
+                                </li>
+
+                                <li>
+                                  <strong>UNE AGRICULTURE A HAUT POTENTIEL MAIS ENCORE PEU PERFORMANTE</strong>
+                                  <dl>
+                                    Le secteur rural a toujours été au centre des politiques et stratégies nationales de développement. Toutefois, la part de l’agriculture dans le Produit Intérieur Brut a régulièrement décliné, passant de plus de 30% dans les années 1970 à moins de 18% en 2019. Le nombre de ménages agricoles était estimé en 2017 à 2 millions. Seul un cinquième de ceux-ci bénéficient d’un encadrement par des organisations socioprofessionnelles.
+                                    Pays agricole, le Cameroun est confronté à des défis importants d’insécurité alimentaire et nutritionnelle sévère et chronique.  Le cadre harmonisé de suivi de la sécurité alimentaire publié en mai 2023 ressort que la consommation alimentaire des ménages est restée stable par rapport à la même période en 2022. Près de 58% des ménages présentent un score de consommation alimentaire acceptable. Dans la région de l’Est, 4 ménages sur 10 seulement ont un niveau de consommation alimentaire acceptable. C’est également dans cette région que les ménages ont la consommation alimentaire la plus faible (près de 3 ménages sur 10). Pour la période considérée (mars à mai 2023), 11% de la population étaient en insécurité alimentaire aigue (3012103 personnes) au Cameroun dont environ 1% en phase urgence (335 899 personnes) et 10% en phase crise (2 676 204 personnes). Au total, 6 093 718 personnes se trouvaient en phase sous pression, soit 22% de l’ensemble de la population.
+                                    Ceci est imputable à divers facteurs sociopolitiques, notamment: (i) les perturbations récurrentes du calendrier agricole liées à la rareté et à l’irrégularité des pluies ou encore à une saison sèche prolongée (ii) la présence de personnes déplacées internes (DPI) au sein des ménages, (iii) l’insécurité transfrontalière et l’insécurité civile, (iv) la hausse des prix des produits alimentaires liée à l’action des spéculateurs sur les marchés, (v) l’abandon d’exploitations agricoles dans certaines localités du Nord-Ouest et du Sud-Ouest et l’abandon des activités agricoles au profit de l’activité minière dans les régions de l’Est, (vi) la destruction des cultures par le bétail en divagation à l’Ouest, et (vii) les attaques de chenilles défoliatrices.
+                                  </dl>
+                                </li>
+
+                              </ol>
+                            </p>
+                        </div>
+
+                        <p class="attr_date_debut">
+                            <span>Publiée : </span>
+                            31/05/2023  
+                        </p>
+
+                    </div>
+                    <!-- class="crd_actualite full" -->
+
+
+                    <!-- END blocs/bloc_module.tpl -->
+                </article>
+
+                <aside id="annexes" class="col-xs-12 col-sm-3">
+ 
+                    <div class="attr_voir_aussi">
+                        <div class="">
+                            <div  class="crd_fichier embed">
+                                <p class="attr_name">
+                                    <a href="../docs/infos site  plate forme multiacteur riz Jdu 22 aout 2023.pdf">
+                                        <span class="lig1 text-justify">Document</span>
+                                    </a>
+                                    &nbsp;
+                                    <span>(841 Ko)</span> 
+                                </p>
+                                <!-- poster Louise - BAT - 30-05-23 .pdf -->
+                            </div>
+                            <!-- class="crd_fichier embed" -->
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+
+    </div>
+
+    <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+    </footer>
+    
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js.map' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+
+</html>

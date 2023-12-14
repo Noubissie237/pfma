@@ -1,0 +1,48 @@
+html, body {
+    height:100%;
+}
+body {
+  margin: 0;
+  background-color: rgba(0,0,0,0.1);
+}
+
+.container-fluid {
+    height: 100%;
+}
+
+.row {
+  height: 100%; 
+}
+
+
+.col-md-6 {
+  float:left;
+  width: 50%;
+  min-height: 100%;
+}
+
+.left {
+background-color: #dbdbdb;
+}
+ 
+.manav
+{
+    background-color: rgba(0,0,0,0.55);
+}
+
+.manav .nav-link
+{
+    border-bottom: 1px solid transparent;
+    transition: padding-bottom .4s ease-in-out, border-color .3s ease;
+}
+
+.manav .nav-link:hover
+{
+    padding-bottom: 10px;
+    border-bottom-color: var(--bs-teal);
+}
+
+.colim
+{
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(32, 201, 151, 0.3)),  url("../../img/moi.jpg") fixed;
+}

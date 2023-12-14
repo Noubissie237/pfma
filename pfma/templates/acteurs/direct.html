@@ -1,0 +1,735 @@
+{%load static %}
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]><html lang="fr-FR" class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html lang="fr-FR" class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html lang="fr-FR" class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html lang="fr-FR" class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="fr-FR" class="no-js"> 
+<!--<![endif]-->
+
+<head>
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="alternate" type="application/rss+xml" title="Flux des actualités du Projet MARIGO" href="RSS/actualites.rss" />
+    <title> Les differents acteurs</title>
+    <link rel="shortcut icon" href="{% static 'img/log1.ico' %}" type="image/x-icon">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/newcss/general.css' %}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/newcss/print.css' %}" media="print" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/newcss/font-awesome.min.css' %}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css//newcss/mmenu.css' %}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/newcss/tiny-slider.css' %}" media="screen" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css.map' %}">
+    
+</head>
+
+
+<body data-node="4347" data-langue="fr-FR" data-classe="crd_page" data-nodeid="4347" class="crd_page mep_standard not_connected" data-path="/1/2/105/4343/4347/" itemscope itemtype="http://schema.org/WebPage">
+
+    <!-- START blocs/accessiblite.tpl -->
+    <ul id="menu_accessibilite">
+        <li><a href="#contenu">Aller au contenu de la page</a></li>
+        <li><a href="#sitenav">Aller au menu de navigation</a></li>
+        <li><a href="#basdepage">Aller au bas de page</a></li>
+    </ul>
+    <!-- END blocs/accessiblite.tpl -->
+
+<div id="container" class="container-fluid">
+    <header class="row"> 
+        <!-- BEGIN blocs/bloc_titresite.tpl -->
+        <div id="titre_site"> 
+          <div class="hgroup" title="Projet MARIGO">
+            <h1><a href="/">Projet MARIGO</a></h1>
+            <h2><a href="/">Culture du riz périurbain au Cameroun</a></h2>
+          </div>
+      
+          <div id="logo">
+            <a href="../" style="text-decoration: none;">
+              <img src="{% static 'img/logo.jpg' %}" alt="" style="width: 15rem;">
+            </a>
+            <span class="TitleSite">
+              Plateforme Multi-Acteurs de la Chaîne de Valeur riz au Cameroun
+            </span>
+          </div>
+        </div>
+        <!-- END blocs/bloc_titresite.tpl -->
+    
+        <span style="margin-left: 100rem;">
+          <button type="button" title="rechercher" style="border: 1px solid #aaa">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" color="#0012ba" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg>
+          </button>
+      
+          <a href="/inscription" title="Connexion/Inscription" style="text-decoration: none; margin-left: 2rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+              <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+            </svg>
+            <span style="font-size: 18px;">Connexion/Inscription</span>
+          </a>
+        </span>
+
+        <p class="menu hidden-md hidden-lg">
+            <a class="btnMenu" href="#menuArborescenceMobile"></a>
+                <span>MENU</span>
+        </p>
+    </header>
+
+    <nav id="menuRubriques" class="hidden-xs hidden-sm">
+        <ul class="sf-menu menudepth_1 mon" >          
+          <li class="pos_4">
+            <a title="Accueil" href="../">
+              <span class="lig1">ACCUEIL</span>
+            </a>
+            <ul class="menudepth_2">
+              <li>
+                <a href="../#descriptif"><span class="lig1">Descriptif du Projet</span></a>
+              </li>
+            </ul>
+          </li>
+          
+          <li class="pos_2 courant">
+            <a href="">
+              <span class="lig1">ACTEURS</span>
+            </a>
+  
+            <ul class="menudepth_3">
+  
+              <li>
+                <a href="institutionnel/"><span class="lig1">acteur institutionnel</span></a>
+                <ul class="menudepth_2" style="background-color: #2d5140;">
+                  <li><a href="institutionnel/#depMin"><span class="lig1">Departements ministériels</span></a></li>
+                  <li><a href="institutionnel/#sstpg"><span class="lig1">Sociétés sous-tutelle & les projets programmes</span></a></li>
+                  <li><a href="institutionnel/#ptf"><span class="lig1">Partenaires techniques & financiers (PTF)</span></a></li>
+                  <li><a href="institutionnel/#snra"><span class="lig1">Système nationale de recherche agricole</span></a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="direct/"><span class="lig1">acteur direct</span></a>
+                <ul class="menudepth_2" style="background-color: #2d5140;">
+                  <li><a href="#producteur"><span class="lig1">Producteurs</span></a></li>
+                  <li><a href="#transformateur"><span class="lig1">Transformateurs</span></a></li>
+                  <li><a href="#distributeur"><span class="lig1">Distributeurs</span></a></li>
+                  <li><a href="#consommateur"><span class="lig1">consommateurs</span></a></li>
+                </ul>    
+              </li>
+  
+              <li> 
+                <a href="/indirect">
+                  <span class="lig1">acteur indirect</span>
+                </a>
+                <ul class="menudepth_2" style="background-color: #2d5140;">
+                  <li><a href="/indirect#presta"><span class="lig1">Prestataires des services de labour</span></a></li>
+                  <li><a href="/indirect#etab"><span class="lig1">Etablissements financiers & banques</span></a></li>
+                </ul>          
+              </li>
+            </ul>
+          </li>
+                       
+          <li class="pos_3">
+            <a title="Les échanges" href="/inscription">
+              <span class="lig1">ECHANGE</span>
+            </a>
+            
+            <ul class="menudepth_2">
+              <li>
+                <a href="/inscription">
+                  <span class="lig1">Forum</span>
+                </a>
+              </li>
+              
+              <li>
+                <a href="/inscription">
+                  <span class="lig1">Video</span>
+                </a>
+              </li>
+  
+            </ul>
+          </li>
+                        
+          <li class="pos_4">
+            <a title="Le Système d'Informations sur le Riz" href="/general">
+              <span class="lig1">S. I. R </span>
+            </a>
+              
+            <ul class="menudepth_2">
+              <li>
+                <a href="/general">
+                  <span class="lig1">Informations Générales</span>
+                </a>
+              </li>
+  
+              <li>
+                <a href="/general">
+                  <span class="lig1">Informations Commerciales</span>
+                </a>
+              </li>
+  
+              <li>
+                <a href="/general">
+                  <span class="lig1">Informations Techniques</span>
+                </a>
+              </li>
+  
+            </ul>
+          </li>
+                                      
+          <li class="pos_5 pos_last">
+            <a title="La médiathèque" href="/mediatheque">
+              <span class="lig1"> médiathèque</span>
+            </a>
+          </li>
+  
+          <li class="pos_5 pos_last">
+            <a title="La Bibliotheque" href="/bibliotheque"><span class="lig1"> Bibliotheque</span></a>          
+            <ul class="menudepth_2">
+              <li>
+                <a href="/bibliotheque"><span class="lig1">Livre techniques</span></a>
+              </li>
+             </ul>
+          </li>
+  
+          <li>
+            <a href="/hand" >Hand in Hand</a>
+          </li>
+  
+        </ul>
+    </nav>
+
+    <nav id="menuArborescenceMobile" class="masqueMenu">
+        <ul class="menu menudepth_1">                          
+          <li class="pos_1">
+            <a title="Le projet" href="/le-projet">
+              <span class="lig1">Le projet</span>
+            </a>
+               
+            <ul class="menudepth_2">
+              <li>
+                <a href="/le-projet/descriptif-du-projet"><span class="lig1">Descriptif du Projet</span></a>
+              </li>
+            </ul>
+          </li>
+                      
+          <li class="pos_2">
+            <a title="Les partenaires et le bailleur" href="/les-partenaires-et-le-bailleur">
+              <span class="lig1">Les partenaires et le bailleur</span>
+            </a>
+              
+            <ul class="menudepth_2">
+              <li>
+                <a href="#">
+                  <span class="lig1">Institution publique</span>
+                </a>
+              </li>
+  
+              <li>
+                <a href="#">
+                  <span class="lig1">Institution privée</span>
+                </a>
+              </li>
+  
+              <li>
+                <a href="#">
+                  <span class="lig1">Oragnisation paysannes</span>
+                </a>
+              </li>
+  
+              <li>
+                <a href="#">
+                  <span class="lig1">Particuliers</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+                        
+          <li class="pos_3">
+            <a title="Les activités" href="/les-activites">
+              <span class="lig1">Les activités</span>
+            </a>
+             
+            <ul class="menudepth_2">
+              <li>
+                <a href="/les-activites/plateforme-multi-acteurs"><span class="lig1">Plateforme multi-acteurs</span></a>
+              </li>
+  
+              <li>
+                <a href="/inscription"><span class="lig1">Diagnostic et évaluation</span></a>
+              </li>
+  
+              <li>
+                <a href="/les-activites/sante-des-sols"><span class="lig1">Santé des sols</span></a>
+              </li>
+  
+              <li>
+                <a href="/les-activites/sante-des-plantes"><span class="lig1">Santé des plantes</span></a>
+              </li>
+  
+              <li>
+                <a href="/les-activites/conservation-transformation-qualite"><span class="lig1">Conservation, transformation, qualité</span></a>
+              </li>
+  
+              <li>
+                <a href="/les-activites/formation-et-diffusion"><span class="lig1">Formation et diffusion</span></a>
+              </li>
+  
+            </ul>
+          </li>
+                       
+          <li class="pos_4">
+            <a title="La communication du projet" href="/la-communication-du-projet"><span class="lig1">La communication du projet</span></a>
+            <ul class="menudepth_2">
+              <li>
+                <a href="/la-communication-du-projet/rapports"><span class="lig1">Rapports</span></a>
+              </li>
+              
+              <li>
+                <a href="/la-communication-du-projet/actualites"><span class="lig1">Actualités</span></a>
+              </li>
+  
+              <li>
+                <a href="/la-communication-du-projet/support-de-communication"><span class="lig1">Support de communication</span></a>
+              </li>
+            </ul>
+          </li>
+                                                     
+          <li class="pos_5 pos_last">
+            <a title="La médiathèque" href="/mediatheque"><span class="lig1">La médiathèque</span></a>                 
+            <ul class="menudepth_2">
+              <li>
+                <a href="#"><span class="lig1">Photos - WP1 plateforme multi-acteurs</span></a>
+              </li>
+  
+              <li>
+                <a href="#"><span class="lig1">Photos - WP2 Diagnostic et évaluation</span></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+    </nav>
+
+    <nav id="menuAriane" class="row hidden-xs">
+        <p id="nav_ariane" class="breadcrumbs" itemprop="breadcrumb">
+            <span class="libelle">
+                Vous êtes ici&nbsp;:
+            </span>
+
+            <span class="bc1">       
+              <a href="../" title="Home">
+                  <span class="home">
+                      <span class="lig1">Home</span>
+                  </span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+                    <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z"/>
+                    <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z"/>
+                  </svg>
+              </a>
+            </span>
+
+            <span class="path-separator">
+                <span class="separator">
+                    &gt;
+                </span>
+            </span>        
+
+            <span class="bc2">
+                  <a href="#"><span class="lig1">Acteurs </span></a>
+            </span>
+
+        </p>
+        <!-- END blocs/menu_ariane.tpl -->
+    </nav>
+
+    <div id="main">
+        <div class="row">
+            <nav id="menuArborescence" class="col-xs-12 col-sm-2 hidden-xs hidden-sm">
+                <ul class="menudepth_1">                                                           
+
+                  <li class="courant">
+                    <a href="#"><span class="lig1">Accueil</span></a>
+                    <ul class="menudepth_2">
+                        <li class="">
+                          <a href="/institutionnel"><span class="lig1">Acteur institutionnel</span></a>
+                        </li>
+                    </ul>
+                  </li>
+
+                    <li class="courant">
+                        <a href="#"><span class="lig1">Accueil</span></a> 
+                        <ul class="menudepth_2">
+                            <li class="courant">
+                                <a href="#actD"><span class="lig1">Acteur direct</span></a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="courant">
+                        <a href="#"><span class="lig1">Accueil</span></a> 
+                        <ul class="menudepth_2">
+                            <li class="">
+                                <a href="/indirect"><span class="lig1">Acteur indirect</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <article id="contenu" class="col-xs-12 col-sm-9 col-md-7">  
+                <h1 class="attr_name">
+                    <span class="lig1">ACTEURS</span>  
+                </h1>
+                <!-- BEGIN blocs/bloc_module.tpl -->
+
+                <div  class="crd_page full">
+                    <div class="attr_accroche">
+                        <span class="lig1">
+                          Les membres de la PFMA qui interviennent dans la chaine de valeur riz ?
+                          Le développement de la filière riziculture au Cameroun est encadré par trois grands types d’acteurs : les acteurs institutionnels, les acteurs directs et les acteurs indirects.                        
+                        </span>  
+                    </div>
+                    <br><br><br>
+
+                    <h3 class="attr_name" style="color : rgba(40,40,40,0.6)">
+                      <span id="actD">ACTEURS DIRECTS</span>  
+                    </h3>
+
+                    <div class="attr_texte">
+                      <br><br>
+                      <p style="font-size: 13px;" id="producteur">
+                        <a href="">
+                          <span><b>Les producteurs (Association des riziculteurs)</b></span>
+                        </a><br />
+                        les riziculteurs sont essentiellement des petits producteurs dont la taille de l’exploitation pour le ménage agricole est d’environ 0, 5 ha en riziculture irriguée et moins de 1 ha en riziculture pluviale. Il est estimé qu’environ 100 000 ménages agricoles au Cameroun s`impliquent dans la riziculture                      
+                      
+                      </p>
+                      <p>
+                        <h4>Liste des producteurs</h4>
+                        <table class="table table-striped">
+                          <tr>
+                            <th>Région</th>
+                            <th>Nom de l'OP</th>
+                            <th>Producteurs de paddy ou de semences</th>
+                            <th>Capacité de production (en tonnes)</th>
+                            <th>Superficie exploitée (en ha)</th>
+                            <th>Localisation (arrondissement)</th>
+                            <th>Contact</th>
+                            <th>Site internet </th>
+                          </tr>
+                          <tr>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                          </tr>
+                          <tr>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                          </tr>
+                          <tr>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                          </tr>
+                          <tr>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                          </tr>
+                        </table>
+                      </p>
+                      <br><br><hr>
+                        
+                      <p style="font-size: 12px;" id="transformateur">
+                        <a href="">
+                          <span><b>Les transformateurs (SEMRY, UNVDA, COOPERATIVES DE PADFA ET PRODERIP)</b></span>
+                        </a><br />
+                        Un transformateur est défini comme étant une personne ou entreprise impliquée dans la transformation du riz paddy en riz consommable et/ou produits dérivés de cette spéculation. Les transformateurs sont principalement les grandes structures étatiques productrices à l’instar de la SEMRY, UNVDA, COOPERATIVES DE PADFA ET PRODERIPUn transformateur est défini comme étant une personne ou entreprise impliquée dans la transformation du riz paddy en riz consommable et/ou produits dérivés de cette spéculation. Les transformateurs sont principalement les grandes structures étatiques productrices à l’instar de la SEMRY, UNVDA, COOPERATIVES DE PADFA ET PRODERIP                      
+                      </p>
+                      
+                      <p>
+                        <h4>Liste des transformateurs  riz paddy en riz blancs</h4>
+
+                        <table class="table table-striped">
+                          <tr>
+                            <th>N°</th>
+                            <th>Région</th>
+                            <th>Nom du transformateurs  riz paddy en riz blancs</th>
+                            <th>Capacité transformation du  riz paddy en riz blancs (en tonnes)</th>
+                            <th>zone de transformation du  riz paddy en riz blancs riz blanc</th>
+                            <th>Localisation (arrondissement)</th>
+                            <th>Contact</th>
+                            <th>Site internet </th>
+                          </tr>
+                          <tr>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>SEMRY</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                          </tr>
+                          <tr>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>UNVDA</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                          </tr>
+                          <tr>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>COOPERATIVES DE PADFA</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                          </tr>
+                          <tr>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                          </tr>
+                        </table>
+                      </p>
+                      <br><br><hr>
+
+                      <p style="font-size: 12px;" id="distributeur">
+                        <a href="">
+                          <span><b>Les importateurs /distributeurs (SONAM Cameroun OLAM CAM SA AGRIEX Cameroon Sarl UNVDA, SEMRY)</b></span>
+                        </a><br />
+                        On considère de manière générale comme importateur, toute personne morale ayant reçu une autorisation du Ministre en charge du Commerce pour l`importation du riz. En 2019, 905 107  tonnes de riz ont été importés par 10 importateurs agrées dont les plus importants sont SONAM Cameroun (226 816 tonnes), OLAM CAM SA (178 690 tonnes) et AGRIEX Cameroon Sarl (157 128 tonnes) <br><br>
+
+                        Les distributeurs sont des acteurs de la chaine en charge de la commercialisation du riz et de ses dérivés au niveau des consommateurs
+                        le schéma de distribution du riz local tournait essentiellement autours des structures paraétatiques rizicoles (UNVDA, SEMRY) jusqu`aux dernières années ou on constate déjà une implication du secteur privé (entreprises, coopératives, individuels).
+                      </p>
+                      <p>
+                        <h4>Liste des importateurs /distributeurs de riz blancs</h4>
+                        <table class="table table-striped">
+                          <tr>
+                            <th>N°</th>
+                            <th>Région</th>
+                            <th>Nom du distributeur/importateur</th>
+                            <th>Capacité d’importation/commercialisation (en tonnes)</th>
+                            <th>Pays/zone d’importation/achat riz blanc</th>
+                            <th>Localisation (arrondissement)</th>
+                            <th>Contact</th>
+                            <th>Site internet </th>
+                          </tr>
+                          <tr>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>SONAM Cameroun </td>
+                            <td>(226 816 tonnes)</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                          </tr>
+                          <tr>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>OLAM CAM SA </td>
+                            <td>(178 690 tonnes)</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                          </tr>
+                          <tr>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>AGRIEX Cameroon Sarl</td>
+                            <td>(157 128 tonnes)</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                          </tr>
+                          <tr>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>UNVDA</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                          </tr>
+                          <tr>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>SEMRY</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                          </tr>
+                        </table>
+                      </p>
+                      <br><br><hr>
+
+                      <p style="font-size: 12px;" id="consommateur">
+                        <a href="">
+                          <span><b>Les consommateurs (Association des consommateurs)</b></span>
+                        </a><br />
+                        Il s`agit de toute personne qui assure la consommation finale du riz. Au Cameroun, la variation de consommation nationale de riz varie de 21 à 25kg/habitant/an. Au rang des consommateurs, nous avons les hôtels, les restaurants, les ménages, etc.
+                      </p>
+                      <P>
+                        <h4>Liste des associations de consommateurs de riz blancs</h4>
+                        <table class="table table-striped">
+                          <tr>
+                            <th>N°</th>
+                            <th>Région</th>
+                            <th>Nom de l’association des consommateurs</th>
+                            <th>Localisation (arrondissement)</th>
+                            <th>Contact</th>
+                            <th>Site internet </th>
+                          </tr>
+                          <tr>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                          </tr>
+                          <tr>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                          </tr>
+                          <tr>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                          </tr>
+                          <tr>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                          </tr>
+                          <tr>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                          </tr>
+                        </table>
+                      </P>
+                      <br><br><hr>
+
+                    </div>
+
+                </div>
+                <!-- class="crd_page full" -->
+
+                <!-- END blocs/bloc_module.tpl -->
+            </article>
+
+            <aside id="annexes" class="col-xs-12 col-sm-3">
+              <div class="attr_image">                                                                                      
+                <a href="../img/glob.png" class="lightbox" rel="galerie">
+                  <img src="{% static 'img/glob.png' %}" width="263" height="157"   style="border: 0px  ;" alt="Logo partenaires tiers et associés" title="Logo partenaires tiers et associés"   />
+                  </a>  
+              </div>
+
+              <div id="contact">
+                <h2 class="contact">Contact</h2>    
+                <div class="attr_contact">
+                  <p style="font-size: 15px;">
+                    <a href="mailto:pfma@gmail.cm">
+                      <blockquote><span>contact@pfma.cm</span></blockquote>
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <br>
+              <div class="px-5">
+                <h3 class="text-primary px-5">Liens</h3>
+                <br><br> 
+                <ul>
+                  <li><a style="font-size: 15px;" href="https://www.cairn.info/revue-herodote-2008-4-page-156.htm">https://www.cairn.info/revue-herodote-2008-4-page-156.htm</a> </li> <br>
+                  <li><a style="font-size: 15px;" href="https://agritrade.cta.int/fr/Agriculture/Produits-de-base/Riz/Les-tendances-du-secteur-du-riz-en-Afrique-de-l-Ouest.html">https://agritrade.cta.int/fr/Agriculture/Produits-de-base/Riz/Les-tendances-du-secteur-du-riz-en-Afrique-de-l-Ouest.html</a> </li> <br>
+                  <li><a style="font-size: 15px;" href="https://www.planetoscope.com/cereales/192-production-de-riz-dans-le-monde.html">https://www.planetoscope.com/cereales/192-production-de-riz-dans-le-monde.html</a> </li> <br>
+                  <li><a style="font-size: 15px;" href="https://boowiki.info/template/wiki7_files/latest_003.png">BOOWIKI</a> </li> <br>
+                  <li><a style="font-size: 15px;" href="https://boowiki.info/art/le-commerce-international/riz-commerce.html">https://boowiki.info/art/le-commerce-international/riz-commerce.html</a> </li> <br>
+                  <li><a style="font-size: 15px;" href="https://agritrade.cta.int/fr/Agriculture/Produits-de-base/Riz">agritrade.cta</a> </li>
+                </ul>
+              </div>
+            </aside>
+        </div>
+    </div>
+
+</div>
+
+<footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+</footer>
+
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.bundle.min.js.map' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+    
+</body>
+</html>
+
+<style>
+  body{
+    overflow: auto;
+  }
+  html, body
+  {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>

@@ -1,0 +1,1307 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]><html lang="fr-FR" class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html lang="fr-FR" class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html lang="fr-FR" class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html lang="fr-FR" class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="fr-FR" class="no-js">
+<!--<![endif]-->
+
+<head>
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="alternate" type="application/rss+xml" title="Flux des actualités du Projet MARIGO" href="RSS/actualites.rss" />
+    <title> Général </title>
+    <link rel="shortcut icon" href="{% static 'img/log1.ico' %}" type="image/x-icon">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/newcss/general.css' %}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/newcss/print.css' %}" media="print" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/newcss/font-awesome.min.css' %}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css//newcss/mmenu.css' %}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/newcss/tiny-slider.css' %}" media="screen" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css.map' %}">
+    
+    
+</head>
+
+
+<body data-node="4347" data-langue="fr-FR" data-classe="crd_page" data-nodeid="4347" class="crd_page mep_standard not_connected" data-path="/1/2/105/4343/4347/" itemscope itemtype="http://schema.org/WebPage">
+
+    <!-- START blocs/accessiblite.tpl -->
+    <ul id="menu_accessibilite">
+        <li><a href="#contenu">Aller au contenu de la page</a></li>
+        <li><a href="#sitenav">Aller au menu de navigation</a></li>
+        <li><a href="#basdepage">Aller au bas de page</a></li>
+    </ul>
+    <!-- END blocs/accessiblite.tpl -->
+
+<div id="container" class="container-fluid">
+    <header class="row"> 
+        <!-- BEGIN blocs/bloc_titresite.tpl -->
+        <div id="titre_site"> 
+          <div class="hgroup" title="Projet MARIGO">
+            <h1><a href="/">Projet MARIGO</a></h1>
+            <h2><a href="/">Culture du riz périurbain au Cameroun</a></h2>
+          </div>
+      
+          <div id="logo">
+            <a href="../" style="text-decoration: none;">
+              <img src="{% static 'img/logo.jpg'%}" alt="" style="width: 15rem;">
+            </a>
+            <span class="TitleSite">
+              Plateforme Multi-Acteurs de la Chaîne de Valeur riz au Cameroun
+            </span>
+          </div>
+        </div>
+        <!-- END blocs/bloc_titresite.tpl -->
+    
+        <span style="margin-left: 100rem;">
+          <button type="button" title="rechercher" style="border: 1px solid #aaa">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" color="#0012ba" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg>
+          </button>
+      
+          <a href="/inscription" title="Connexion/Inscription" style="text-decoration: none; margin-left: 2rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+              <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+            </svg>
+            <span style="font-size: 18px;">Connexion/Inscription</span>
+          </a>
+        </span>
+
+        <p class="menu hidden-md hidden-lg">
+            <a class="btnMenu" href="#menuArborescenceMobile"></a>
+                <span>MENU</span>
+        </p>
+    </header>
+
+    <nav id="menuRubriques" class="hidden-xs hidden-sm">
+        <ul class="sf-menu menudepth_1 mon" >          
+          <li class="pos_4">
+            <a title="Accueil" href="../">
+              <span class="lig1">ACCUEIL</span>
+            </a>
+            <ul class="menudepth_2">
+              <li>
+                <a href="../#descriptif"><span class="lig1">Descriptif du Projet</span></a>
+              </li>
+            </ul>
+          </li>
+          
+          <li class="pos_2">
+            <a href="/direct">
+              <span class="lig1">ACTEURS</span>
+            </a>
+  
+            <ul class="menudepth_3">
+              <li>
+                <a href="/institutionnel"><span class="lig1">acteur institutionnel</span></a>
+                <ul class="menudepth_2" style="background-color: #2d5140;">
+                  <li><a href="/institutionnel/#depMin"><span class="lig1">Departements ministériels</span></a></li>
+                  <li><a href="/institutionnel/#sstpg"><span class="lig1">Sociétés sous-tutelle & les projets programmes</span></a></li>
+                  <li><a href="/institutionnel/#ptf"><span class="lig1">Partenaires techniques & financiers (PTF)</span></a></li>
+                  <li><a href="/institutionnel/#snra"><span class="lig1">Système nationale de recherche agricole</span></a></li>
+                </ul>
+              </li>
+  
+              <li>
+                <a href="/direct"><span class="lig1">acteur direct</span></a>
+                <ul class="menudepth_2" style="background-color: #2d5140;">
+                  <li><a href="/direct/#producteur"><span class="lig1">Producteurs</span></a></li>
+                  <li><a href="/direct/#transformateur"><span class="lig1">Transformateurs</span></a></li>
+                  <li><a href="/direct/#distributeur"><span class="lig1">Distributeurs</span></a></li>
+                  <li><a href="/direct/#consommateur"><span class="lig1">consommateurs</span></a></li>
+                </ul>    
+              </li>
+  
+              <li> 
+                <a href="/indirect">
+                  <span class="lig1">acteur indirect</span>
+                </a>
+                <ul class="menudepth_2" style="background-color: #2d5140;">
+                  <li><a href="/indirect/#presta"><span class="lig1">Prestataires des services de labour</span></a></li>
+                  <li><a href="/indirect/#etab"><span class="lig1">Etablissements financiers & banques</span></a></li>
+                </ul>          
+              </li>
+            </ul>
+          </li>
+                       
+          <li class="pos_3">
+            <a title="Les échanges" href="/inscription">
+              <span class="lig1">ECHANGE</span>
+            </a>
+            
+            <ul class="menudepth_2">
+              <li>
+                <a href="/inscription">
+                  <span class="lig1">Forum</span>
+                </a>
+              </li>
+              
+              <li>
+                <a href="/inscription">
+                  <span class="lig1">Video</span>
+                </a>
+              </li>
+  
+            </ul>
+          </li>
+                        
+          <li class="pos_4 courant">
+            <a title="Le système d’information sur le riz" href="">
+              <span class="lig1">S. I. R </span>
+            </a>
+              
+            <ul class="menudepth_2">
+              <li>
+                <a href="">
+                  <span class="lig1">Informations Générales</span>
+                </a>
+              </li>
+  
+              <li>
+                <a href="/commercial">
+                  <span class="lig1">Informations Commerciales</span>
+                </a>
+              </li>
+  
+              <li>
+                <a href="/technique">
+                  <span class="lig1">Informations Techniques</span>
+                </a>
+              </li>
+  
+            </ul>
+          </li>
+                                      
+          <li class="pos_5 pos_last">
+            <a title="La médiathèque" href="/mediatheque">
+              <span class="lig1"> médiathèque</span>
+            </a>
+
+          </li>
+  
+          <li class="pos_5 pos_last">
+            <a title="La Bibliotheque" href="/bibliotheque"><span class="lig1"> Bibliotheque</span></a>          
+            <ul class="menudepth_2">
+              <li>
+                <a href="/bibliotheque"><span class="lig1">Livre techniques</span></a>
+              </li>
+             </ul>
+          </li>
+  
+          <li>
+            <a href="/hand" >Hand in Hand</a>
+          </li>
+  
+        </ul>
+    </nav>
+
+    <nav id="menuArborescenceMobile" class="masqueMenu">
+        <ul class="menu menudepth_1">                          
+          <li class="pos_1">
+            <a title="Le projet" href="/le-projet">
+              <span class="lig1">Le projet</span>
+            </a>
+               
+            <ul class="menudepth_2">
+              <li>
+                <a href="/le-projet/descriptif-du-projet"><span class="lig1">Descriptif du Projet</span></a>
+              </li>
+            </ul>
+          </li>
+                      
+          <li class="pos_2">
+            <a title="Les partenaires et le bailleur" href="/les-partenaires-et-le-bailleur">
+              <span class="lig1">Les partenaires et le bailleur</span>
+            </a>
+              
+            <ul class="menudepth_2">
+              <li>
+                <a href="#">
+                  <span class="lig1">Institution publique</span>
+                </a>
+              </li>
+  
+              <li>
+                <a href="#">
+                  <span class="lig1">Institution privée</span>
+                </a>
+              </li>
+  
+              <li>
+                <a href="#">
+                  <span class="lig1">Oragnisation paysannes</span>
+                </a>
+              </li>
+  
+              <li>
+                <a href="#">
+                  <span class="lig1">Particuliers</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+                        
+          <li class="pos_3">
+            <a title="Les activités" href="/les-activites">
+              <span class="lig1">Les activités</span>
+            </a>
+             
+            <ul class="menudepth_2">
+              <li>
+                <a href="/les-activites/plateforme-multi-acteurs"><span class="lig1">Plateforme multi-acteurs</span></a>
+              </li>
+  
+              <li>
+                <a href="/inscription"><span class="lig1">Diagnostic et évaluation</span></a>
+              </li>
+  
+              <li>
+                <a href="/les-activites/sante-des-sols"><span class="lig1">Santé des sols</span></a>
+              </li>
+  
+              <li>
+                <a href="/les-activites/sante-des-plantes"><span class="lig1">Santé des plantes</span></a>
+              </li>
+  
+              <li>
+                <a href="/les-activites/conservation-transformation-qualite"><span class="lig1">Conservation, transformation, qualité</span></a>
+              </li>
+  
+              <li>
+                <a href="/les-activites/formation-et-diffusion"><span class="lig1">Formation et diffusion</span></a>
+              </li>
+  
+            </ul>
+          </li>
+                       
+          <li class="pos_4">
+            <a title="La communication du projet" href="/la-communication-du-projet"><span class="lig1">La communication du projet</span></a>
+            <ul class="menudepth_2">
+              <li>
+                <a href="/la-communication-du-projet/rapports"><span class="lig1">Rapports</span></a>
+              </li>
+              
+              <li>
+                <a href="/la-communication-du-projet/actualites"><span class="lig1">Actualités</span></a>
+              </li>
+  
+              <li>
+                <a href="/la-communication-du-projet/support-de-communication"><span class="lig1">Support de communication</span></a>
+              </li>
+            </ul>
+          </li>
+                                                     
+          <li class="pos_5 pos_last">
+            <a title="La médiathèque" href="/la-mediatheque"><span class="lig1">La médiathèque</span></a>                 
+            <ul class="menudepth_2">
+              <li>
+                <a href="/la-mediatheque/photos-wp1-plateforme-multi-acteurs"><span class="lig1">Photos - WP1 plateforme multi-acteurs</span></a>
+              </li>
+  
+              <li>
+                <a href="/la-mediatheque/photos-wp2-diagnostic-et-evaluation"><span class="lig1">Photos - WP2 Diagnostic et évaluation</span></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+    </nav>
+
+    <nav id="menuAriane" class="row hidden-xs">
+        <p id="nav_ariane" class="breadcrumbs" itemprop="breadcrumb">
+            <span class="libelle">
+                Vous êtes ici&nbsp;:
+            </span>
+
+            <span class="bc1">       
+              <a href="../" title="Home">
+                  <span class="home">
+                      <span class="lig1">Home</span>
+                  </span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+                    <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z"/>
+                    <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z"/>
+                  </svg>
+              </a>
+            </span>
+
+            <span class="path-separator">
+                <span class="separator">
+                    &gt;
+                </span>
+            </span>        
+
+            <span class="bc2">
+                  <a href="#"><span class="lig1">Acteurs </span></a>
+            </span>
+
+        </p>
+        <!-- END blocs/menu_ariane.tpl -->
+    </nav>
+
+    <div id="main">
+        <div class="row">
+            <nav id="menuArborescence" class="col-xs-12 col-sm-2 hidden-xs hidden-sm">
+                <ul class="menudepth_1">                                                           
+                    <li class="courant">
+                        <a href=""><span class="lig1">Accueil</span></a> 
+                        <ul class="menudepth_2">
+                            <li class="courant">
+                                <a href="#"><span class="lig1">Informations Générales</span></a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="courant">
+                        <a href="#"><span class="lig1">Accueil</span></a> 
+                        <ul class="menudepth_2">
+                            <li class="">
+                                <a href="/commercial"><span class="lig1">Informations Commerciales</span></a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="courant">
+                        <a href="#"><span class="lig1">Accueil</span></a> 
+                        <ul class="menudepth_2">
+                            <li class="">
+                                <a href="/technique"><span class="lig1">Informations Techniques</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <article id="contenu" class="col-xs-12 col-sm-9 col-md-7">  
+                <h1 class="attr_name">
+                    <span class="lig1">SYSTEM D'INFORMATIONS SUR LE RIZ</span>  
+                </h1>
+                <!-- BEGIN blocs/bloc_module.tpl -->
+
+                <div  class="crd_page full">
+                    <div class="attr_accroche">
+                        <span class="lig1">
+                          <!-- Les membres de la PFMA qui interviennent dans la chaine de valeur riz ? -->
+                          <!-- Le développement de la filière riziculture au Cameroun est encadré par trois grands types d’acteurs : les acteurs institutionnels, les acteurs directs et les acteurs indirects.                         -->
+                        </span>  
+                    </div>
+                    <br><br><br>
+
+                    <h3 class="attr_name" style="color : rgba(40,40,40,0.6)">
+                      <span id="institutionnel">LE CADRE INCITATIF : POURQUOI INVESTIR AU CAMEROUN</span>  
+                    </h3>
+
+                    <div class="attr_texte" style="font-size: 14px;">
+                        <p class="p_1" id="depMin">DONNEES GENERALES SUR LE CAMEROUN</p>
+                        <p style="font-size: 12px;">Le Cameroun, pays d’Afrique centrale situé au fond du golfe de Guinée, 475 442 km², se distingue par sa position stratégique, au carrefour de l’Afrique de l’Ouest et du Centre, à l’intersection des zones CEDEAO et CEMAC. Il partage plus de 1500 km de frontière avec le Nigeria, première économie d’Afrique. Du point de vue administratif, le Cameroun est subdivisé en 10 régions, 58 départements et 360 arrondissements tous regroupés en 5 zones agro écologiques  </p>
+                        <p style="font-size: 12px;">
+                            <br><hr><span><b><a href="#">Une population rapidement croissante et jeune</a></b></span>
+                          </a><br />
+                          Pays le plus peuplé de la zone CEMAC et  phare de la sous-région, le Cameroun serait peuplé d’environ 35 millions d’habitants en 2030 avec un taux d’accroissement de 2,6% par an. Cette population est actuellement composée de 50,6% de femmes et se caractérise par son extrême jeunesse, avec un âge moyen proche de 22 ans ; les moins de 15 ans représentent 43,6% et la proportion de la population en âge de travailler (constituée des personnes de 15 – 64 ans) est de 53,5%. La taille moyenne d’un ménage est de 6 personnes. La main d’œuvre est donc abondante, jeune et relativement qualifiée, mais davantage attirée vers les grandes agglomérations où les opportunités socio-économiques apparaissent plus attrayantes. <br><br>
+                          Malgré de fortes incertitudes sur la situation géopolitique internationale, les perspectives économiques à court et moyen termes restent satisfaisantes. Le taux de croissance est estimé à 4,3% en 2023 et 4,5% en moyenne sur la période 2024-2025. L’inflation devrait continuer à se situer en 2023 au-dessus du seuil communautaire de 3% et revenir progressivement en dessous à moyen terme. La reprise économique Post COVID-19 de l’économie camerounaise a été contrainte par l’évolution inédite de l’inflation qui a réduit le pouvoir d’achat des ménages et accru les coûts de production des entreprises.
+                        </p>
+
+                        <p style="font-size: 12px;">
+                            <br><hr><span><b><a href="#">Une forte incidence de la pauvreté rurale</a></b></span>
+                          </a><br />
+                          L’incidence de la pauvreté était estimée à 37,5% en 2014, contre 39,9% en 2007 (ECAM 4, INS). L’analyse de la pauvreté selon les régions et le milieu de résidence montrait que les producteurs ruraux constituaient le groupe socio-économique le plus exposé à la précarité et contribuaient à 66,1% à la pauvreté nationale. Le milieu rural, où réside près de 43,7% de la population totale, concentre 90% des personnes vivant en-dessous du seuil de pauvreté, c’est-à-dire avec moins de 931 FCFA par jour pour couvrir les besoins prioritaires de base d’un adulte (ECAM 4, INS). 
+
+                        </p>
+
+                        <p style="font-size: 12px;">
+                            <br><hr><span><b><a href="#">Une agriculture à haut potentiel mais encore peu performante</a></b></span>
+                          </a><br />
+                          Le secteur rural a toujours été au centre des politiques et stratégies nationales de développement. Toutefois, la part de l’agriculture dans le Produit Intérieur Brut a régulièrement décliné, passant de plus de 30% dans les années 1970 à moins de 18% en 2019. Le nombre de ménages agricoles était estimé en 2017 à 2 millions. Seul un cinquième de ceux-ci bénéficient d’un encadrement par des organisations socioprofessionnelles. <br><br>
+                          Pays agricole, le Cameroun est confronté à des défis importants d’insécurité alimentaire et nutritionnelle sévère et chronique.  Le cadre harmonisé de suivi de la sécurité alimentaire publié en mai 2023 ressort que la consommation alimentaire des ménages est restée stable par rapport à la même période en 2022. Près de 58% des ménages présentent un score de consommation alimentaire acceptable. Dans la région de l’Est, 4 ménages sur 10 seulement ont un niveau de consommation alimentaire acceptable. C’est également dans cette région que les ménages ont la consommation alimentaire la plus faible (près de 3 ménages sur 10). Pour la période considérée (mars à mai 2023), 11% de la population étaient en insécurité alimentaire aigue (3012103 personnes) au Cameroun dont environ 1% en phase urgence (335 899 personnes) et 10% en phase crise (2 676 204 personnes). Au total, 6 093 718 personnes se trouvaient en phase sous pression, soit 22% de l’ensemble de la population. <br><br>
+                          Ceci est imputable à divers facteurs sociopolitiques, notamment: (i) les perturbations récurrentes du calendrier agricole liées à la rareté et à l’irrégularité des pluies ou encore à une saison sèche prolongée (ii) la présence de personnes déplacées internes (DPI) au sein des ménages, (iii) l’insécurité transfrontalière et l’insécurité civile, (iv) la hausse des prix des produits alimentaires liée à l’action des spéculateurs sur les marchés, (v) l’abandon d’exploitations agricoles dans certaines localités du Nord-Ouest et du Sud-Ouest et l’abandon des activités agricoles au profit de l’activité minière dans les régions de l’Est, (vi) la destruction des cultures par le bétail en divagation à l’Ouest, et (vii) les attaques de chenilles défoliatrices. <br>
+
+                        </p>
+
+                        <p style="font-size: 12px;">
+                            <br><hr><span><b><a href="#">Le riz, une denrée gourmande en devises et pourtant localement cultivable</a></b></span>
+                          </a><br />
+                          Au Cameroun, le riz constitue un aliment de base pour les populations, notamment urbaines. Il occupe la seconde place des céréales les plus consommées après le maïs. L’indice de consommation du riz par an est de 25 kg par habitant. Pour une consommation annuelle estimée à 637 000 tonnes en 2023, la production estimée est de 270 000 tonnes. Ce déficit ira croissant avec les années si aucune intervention n’est menée. Il atteindrait 300 000 tonnes à l’horizon 2030. 
+                         <br><br> <strong>Tableau : Tableau récapitulatif des besoins de consommation (en milliers de tonnes)</strong><br>
+                         <table class="table table-striped">
+                            <tr>
+                              <th></th>
+                              <th>2023</th>
+                              <th>2024</th>
+                              <th>2025</th>
+                              <th>2026</th>
+                              <th>2027</th>
+                              <th>2028</th>
+                              <th>2029</th>
+                              <th>2030</th>
+                            </tr>
+                            <tr>
+                              <th>Besoin en consommation</th>
+                              <th>637</th>
+                              <th>655</th>
+                              <th>673</th>
+                              <th>693</th>
+                              <th>714</th>
+                              <th>732</th>
+                              <th>753</th>
+                              <th>772</th>
+                            </tr>
+                         </table>
+                         <strong>Source : MINADER, 2023, SNDR, P 43 </strong>
+                          <br>
+                          Au niveau du marché CEMAC, la demande est estimée à un peu plus de 1 200 000 tonnes de riz blanchi par an. Elle émane essentiellement de celle des ménages, des restaurants et des hôtels. La production locale couvre à peine le ¼ de la demande réelle du riz de la sous-région ?. <br>
+                        </p>
+
+
+                        
+                    </div>
+
+                    <div class="attr_texte" style="font-size: 14px;">
+                      <p class="p_1" id="depMin">DONNEES GENERALES SUR LE CAMEROUN</p>
+                      <p style="font-size: 12px;">Plusieurs arguments militent pour le développement des investissements envisagés dans le cadre de l’initiative MdM au Cameroun. Ils comprennent : des atouts naturels, des avancées techniques dans le secteur, et  les dispositions de gouvernance  favorables présentées par le pays. </p>
+                      <p style="font-size: 12px;">
+                          <br><hr><span><b><a href="#">Sur le plan des atouts naturels</a></b></span>
+                        </a><br />
+                        <div class="row">
+                          <div class="col-8">
+                            <ul>
+                              <li>Position géographique stratégique du Cameroun au fond du Golfe de Guinée ;</li>
+                              <li>Abondance de terres arables adaptées à la production du riz ;</li>
+                              <li>Immense potentiel en terres irrigables (estimé à environ 240 000 ha) ; </li>
+                              <li>Diversité agroécologique avec possibilité de riziculture dans les cinq zones caractérisant le pays ;</li>
+                              <li>Potentiel agricole actuellement sous-exploité ;</li>
+                              <li>Population croissante et consommant toujours plus de riz d’année en année.</li>
+                            </ul>
+                          </div>
+                          <div class="col-4">
+                            <img src="../img/new.png" alt="map">
+                          </div>
+                        </div>
+                        <br>
+                      </p>
+
+                      <p style="font-size: 12px;">
+                          <br><hr><span><b><a href="#">En ce qui concerne les avancées techniques dans le secteur :</a></b></span>
+                        </a><br />
+                        <ul>
+
+                          <li> L’existence d’un savoir-faire endogène améliorable </li>
+                          <li> L’existence d’un système établi de production et de distribution des semences </li>
+                          <li> L’existence de variétés de semences améliorées et adaptées aux cinq zones agro écologiques </li>
+                          <li> L’existence d’initiatives publiques et privées de transformation locale du riz paddy </li>
+                          <li> La disponibilité locale de la petite mécanisation de production et de transformation ;</li>
+                        </ul>
+
+                      </p>
+
+                      <p style="font-size: 12px;">
+                          <br><hr><span><b><a href="#">En matière de gouvernance favorable:</a></b></span>
+                        </a><br />
+                        <ul>
+                          <li>La stabilité politique du pays ;</li> 
+                          <li>L’existence d’un minimum de structuration des acteurs de la chaine de valeurs ;</li> 
+                          <li>L’existence d’un manuel de procédure d’octroi des subventions dans le secteur ;</li> 
+                          <li>L’existence d’une loi sur les interprofessions ;</li> 
+                          <li>L’éxistence d’un ministère en charge de l’agriculture et du développement rural ainsi qu’un ministère en charge de l’élevage, des pêches et des industries animales</li> 
+                          <li>L’identification de la filière riz comme filière prioritaire dans la politique ambiante d’import-substitution ;</li> 
+                          <li>La présence d’un nombre élevé d’institutions d’accompagnement de la filière ;</li> 
+                          <li>Une loi fixant un ensemble d’incitations fiscalo-douanières et financières pour les investissements privés ;</li> 
+                          <li>Une loi sur le partenariat public-privé, les modalités de son exécution et les avantages y relatifs</li> 
+                        </ul>
+                      </p>
+
+                    </div>
+
+                    <div class="attr_texte" style="font-size: 14px;">
+                      <p class="p_1" id="depMin">FILIÈRE RIZ AU CAMEROUN</p>
+                      <p style="font-size: 12px;">
+                          <br><span><b><a href="#">Situation de l’offre et de la demande</a></b></span>
+                        </a><br />
+                        La production nationale de riz en 2020 est estimée à 115 000 tonnes, issue essentiellement des bassins de production des régions du Nord, de l’Extrême Nord et du Nord-Ouest. Les acteurs majeurs du secteur sont des entreprises publiques telles que la SEMRY et l’UNVDA. <br> <br>
+                        La région de l’Extrême-Nord produit environ les 2/3 à travers 180 000 personnes directement impliquées dans les activités rizicoles, soit un peu plus de 27 000 ménages (SNDR, 2009). <br><br>
+                        Les importations de riz ont évolué à la hausse depuis la fin des années 2000. En 2019, selon les statistiques officielles du Ministère du Commerce, le Cameroun a importé 833 000 tonnes de riz. De manière générale on estime que depuis 2010, le Cameroun a importé en moyenne 632 000 tonnes de riz blanchi par an, à un prix moyen de 260 FCFA/kg (toutes qualités confondues) soit une dépense moyenne annuelle de 165 milliards de FCFA. <br><br>
+                        La demande de riz est en forte croissance du fait de l’urbanisation et des changements dans les modes d’alimentation qui s’ensuivent. <br><br>
+                        Les besoins nationaux ajustés en 2018/2019 étaient estimés à 462 000 tonnes. Avec un taux de progression de 2,5% l’an, ces besoins sont projetés en 2021 à 593 875 tonnes et à 629 421 tonnes en 2023 <br><br>
+                        <strong>Tableau: Estimation prévisionnelle de la demande et de l'offre en riz </strong><br>
+                        <table class="table table-striped">
+                          <tr>
+                            <th></th>
+                            <th>Unité</th>
+                            <th>2020</th>
+                            <th>2021</th>
+                            <th>2022</th>
+                            <th>2023</th>
+                            <th>2024</th>
+                          </tr>
+                          <tr>
+                            <td>Population</td>
+                            <td>Habitant</td>
+                            <td>24 990 662</td>
+                            <td>25 594 168</td>
+                            <td>26 212 247</td>
+                            <td>26 845 253</td>
+                            <td>27 493 546</td>
+                          </tr>
+                          <tr>
+                            <td>Consommateurs (90%)</td>
+                            <td>Tête</td>
+                            <td>22 491 596</td>
+                            <td>23 034 751</td>
+                            <td>23 591 023</td>
+                            <td>24 160 728</td>
+                            <td>24 744 191</td>
+                          </tr>
+                          <tr>
+                            <td>Consommation par tête</td>
+                            <td>Kg</td>
+                            <td>25,7</td>
+                            <td>25,8</td>
+                            <td>25,9</td>
+                            <td>26,1</td>
+                            <td>26,2</td>
+                          </tr>
+                          <tr>
+                            <td>Demande totale (1)</td>
+                            <td>Tonne</td>
+                            <td>576 949</td>
+                            <td>593 875</td>
+                            <td>611 358</td>
+                            <td>629 421</td>
+                            <td>648 085</td>
+                          </tr>
+                          <tr>
+                            <td>Offre (2)</td>
+                            <td>Tonne</td>
+                            <td>115 763</td>
+                            <td>121 551</td>
+                            <td>127 628</td>
+                            <td>134 010</td>
+                            <td>140 710</td>
+                          </tr>
+                          <tr>
+                            <td class="text-danger">Gap (3) = (2)-(1)</td>
+                            <td class="text-danger">Tonne</td>
+                            <td class="text-danger">-461 186</td>
+                            <td class="text-danger">-472 324</td>
+                            <td class="text-danger">-483 730</td>
+                            <td class="text-danger">-495 411</td>
+                            <td class="text-danger">-507 375</td>
+                          </tr>
+                        </table>
+                        <em>
+                          Source : projections faites à partir de SNDR, 2009 
+                        </em>
+                      </p>
+                      <p>
+                        <strong>
+                          Le déficit en 2020 se situait à 471 186 000 tonnes et en 2023, il sera de 495 400 tonnes si aucune mesure n’est prise, soit  plus de 129 milliards de F CFA de valeur.
+                        </strong>
+                      </p>
+
+                      <p style="font-size: 12px;">
+                          <br><hr><span><b><a href="#">Identification des bassins de production</a></b></span>
+                        </a><br />
+                        Le riz est essentiellement produit dans les régions suivantes : <br>
+                        <strong>Tableau  : Répartition des bassins de production</strong><br>
+                        <table class="table table-warning table-striped">
+                          <tr>
+                            <th>Bassins de production</th>
+                            <th>Structures d’encadrement</th>
+                            <th>Atouts</th>
+                            <th>Limites</th>
+                            <th>Catégorie de producteurs</th>
+                          </tr>
+                          <tr>
+                            <td>
+                              Extrême-Nord
+                              <ul>
+                                <li>
+                                  Mayo Danay (périmètres irrigués de Yagoua et Maga)
+                                </li>
+                                <li>
+                                  Logone et Chari
+                                </li>
+                              </ul>
+                            </td>
+                            <td>SEMRY <br>
+                              PDRI-LC <br>
+                              PADFA <br>
+                              PULCI</td>
+                            <td>
+                              <ul>
+                                <li>Vastes plaines inondables (proximité du fleuve Logone)</li>
+                                <li>Climat favorable </li>
+                                <li>Facilité de séchage</li>
+                                <li>Superficie de terres aménageables : 140000 ha pour culture irriguée </li>
+                              </ul>
+                            </td>
+                            <td>
+                              <ul>
+                                <li>Rendement moyen (5tonnes/ha)</li>
+                                <li>Pluviométrie incertaine</li>
+                              </ul>
+                            </td>
+                            <td>Petits et moyens producteurs</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Nord <br>
+                              Benoue, Lagdo
+                            </td>
+                            <td>
+                              PADFA <br>
+                              MEADEN <br>
+                              PULCI
+                            </td>
+                            <td>
+                              <ul>
+                                <li>Zone inondable autour du barrage de Lagdo et du fleuve Bénoué</li>
+                                <li>Climat favorable </li>
+                                <li>Facilité de séchage</li>
+                                  Superficie de terres aménageables : environ 20 000 ha pour culture irriguée
+            
+                              </ul>
+                            </td>
+                            <td>
+                              <ul>
+                                <li>Rendement moyen</li>
+                              </ul>
+                              (5tonnes/ha)
+                              Pluviométrie incertaine
+                            </td>
+                            <td>
+                              Petits et moyens producteurs
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Ouest <br>
+                              • Noun  <br>
+                              • Nde (Tonga) <br>
+                              • Menoua (Santchou) <br>
+                            </td>
+                            <td>
+                              • PADFA <br>
+                              • AFRIFOOD <br>
+                              • Projet Mont Mbappit <br>
+                            </td>
+                            <td>
+                              • Forte concentration de moyens de producteurs <br>
+                              • Environnement propice à l’intensification.  <br>
+                              • Superficie disponible: 3 000 ha  <br>
+                            </td>
+                            <td>
+                              • Difficultés de séchage <br>
+                              • Problèmes fonciers <br>
+                              • Pertes post récolte élevées <br>
+                            </td>
+                            <td>Petits et Moyens producteurs</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Centre  <br>
+                              • Mbam et Inoubou <br>
+                              • Haute sanaga (Avangane, Nkoteng) <br>
+                            </td>
+                            <td>
+                              • PRODERIP <br>
+                              • FPRIAC
+                            </td>
+                            <td>
+                              • Disponibilité de terres cultivables  <br>
+                              • Pluviométrie favorable <br>
+                              • Superficie de terres disponibles: 50 000 ha 
+                            </td>
+                            <td>
+                              Difficultés de séchage  <br>
+                              Rendements faibles <br>
+                              • Pertes post récoltes élevées <br>
+                              • Attaque d’oiseaux  <br>
+                            </td>
+                            <td>Petits producteurs</td>
+                          </tr>
+                          <tr>
+                            <td>Nord-Ouest <br>
+                              Ngoketundja <br>Menchum</td>
+                              <td>
+                                • UNVDA <br>
+                                • PADFA
+                              </td>
+                              <td>
+                                Terrain vaste et propice à la mécanisation <br>
+                                • Meilleurs rendements <br>
+                                • Superficie disponible: <br>
+                                • Plus de  5000ha
+                              </td>
+                              <td>
+                                • Difficultés de séchage <br>
+                                • Problèmes fonciers <br>
+                                • Pertes post récoltes  <br>
+                                • Risques d’insécurité
+                              </td>
+                              <td>
+                                Moyens et grands producteurs
+                              </td>
+                          </tr>
+                          <tr>
+                            <td>Est <br> Kadey</td>
+                            <td>PRODERIP</td>
+                            <td>
+                              • Superficie des terres disponibles (20 000 ha), <BR></BR>
+                              • Pluviométrie favorable
+                            </td>
+                            <td>
+                              • Faible utilisation des engrais <br>
+                              • Faible maitrise de la culture irriguée <br>
+                                Difficultés de séchage et de stockage <br>
+                                Rendements faibles <br>
+                              • Pertes post récoltes  <br>
+                              • Attaque d’oiseaux <br>
+                              • Coût élevé du dessouchage 
+                            </td>
+                            <td>Petits producteurs</td>
+                          </tr>
+                          <tr>
+                            <td>Sud</td>
+                            <td>PRODERIP</td>
+                            <td>
+                              • Terres fertiles  <br>
+                              • Superficie disponible : 10 000ha <br>
+                              • Pluviométrie favorable
+                          
+                            </td>
+                            <td>
+                              • Faible utilisation des engrais <br>
+                              • Faible maitrise de la culture irriguée <br>
+                              -Difficultés de séchage  <br>
+                              -Rendements faibles <br>
+                              • Pertes post récoltes  <br>
+                              • Attaque d’oiseaux <br>
+                          Coût élevé de dessouchage 
+                            </td>
+                            <td></td>
+                          </tr>
+                        </table>
+                        <em>Source: MINADER/DESA et nos calculs</em>
+
+                      </p>
+
+                      <p style="font-size: 12px;">
+                        <br><hr><span><b><a href="#">Principaux acteurs et potentiels de production</a></b></span>
+                        </a><br />
+                        <strong>Tableau  : Etat des lieux des périmètres et bassins rizicoles </strong><br>
+                        <table class="table table-striped">
+                          <tr>
+                            <th>Acteur/Bassin de production</th>
+                            <th>Superficie Exploitée (Ha)</th>
+                            <th>Superficie Potentielle (Ha)</th>
+                            <th>Production actuelle (riz marchand) (T)/campagne</th>
+                            <th>Production potentielle (riz marchand)/ campagne</th>
+                          </tr>
+                          <tr>
+                            <td>SEMRY (périmètres irrigués de Yagoua et de Maga)</td>
+                            <td>10 000</td>
+                            <td>20 000</td>
+                            <td>60 000</td>
+                            <td>120 000</td>
+                          </tr>
+                          <tr>
+                            <td>UNVDA (Ndop)</td>
+                            <td>1 530</td>
+                            <td>14000</td>
+                            <td>18 000</td>
+                            <td>96 000</td>
+                          </tr>
+                          <tr>
+                            <td>PDRI (Logone et Chari)</td>
+                            <td>1 500</td>
+                            <td>1 500</td>
+                            <td>1 950</td>
+                            <td>1 950</td>
+                          </tr>
+                          <tr>
+                            <td>Lagdo</td>
+                            <td>600</td>
+                            <td>17 000</td>
+                            <td>1500 </td>
+                            <td>42 500</td>
+                          </tr>
+                          <tr>
+                            <td>SODERIM (Santchou)</td>
+                            <td>50</td>
+                            <td>3 000</td>
+                            <td>48</td>
+                            <td>6000</td>
+                          </tr>
+                          <tr>
+                            <td>Mont Mbappit (Noun)</td>
+                            <td>300</td>
+                            <td>1500</td>
+                            <td>400</td>
+                            <td>3000</td>
+                          </tr>
+                          <tr>
+                            <td>PADFA (Menchum Valley)</td>
+                            <td>65</td>
+                            <td>200</td>
+                            <td>84</td>
+                            <td>84</td>
+                          </tr>
+                          <tr>
+                            <td>Projet Moulvoudaye (Moulvoudaye)</td>
+                            <td>250</td>
+                            <td>600</td>
+                            <td>240</td>
+                            <td>576</td>
+                          </tr>
+                          <tr>
+                            <td>PADFA (Vallée Bénoué, Guider, Sittibirilli (Ext Nord))</td>
+                            <td>1 608</td>
+                            <td>2 120</td>
+                            <td>1 567</td>
+                            <td>1567</td>
+                          </tr>
+                          <tr>
+                            <td>PLANUT (Logone et Chari)</td>
+                            <td>0</td>
+                            <td>20 000</td>
+                            <td>0</td>
+                            <td>17 000</td>
+                          </tr>
+                          <tr>
+                            <td>Ferme pilote Avangane (NKoteng)</td>
+                            <td>40</td>
+                            <td>60</td>
+                            <td>78</td>
+                            <td>78</td>
+                          </tr>
+                          <tr>
+                            <td>Bassin émergeant de la Haute Sanaga</td>
+                            <td>100</td>
+                            <td>100</td>
+                            <td>195</td>
+                            <td>130</td>
+                          </tr>
+                          <tr>
+                            <td>Afrifood</td>
+                            <td>30</td>
+                            <td>30</td>
+                            <td>39</td>
+                            <td>39</td>
+                          </tr>
+                          <tr>
+                            <td>PADFA (Bassin rizicole de Tonga)</td>
+                            <td>50</td>
+                            <td>1 000</td>
+                            <td>49</td>
+                            <td>975</td>
+                          </tr>
+                          <tr>
+                            <td>PRODERIP (zones de forêt à pluviométrie bimodale) et autres producteurs de riz pluvial</td>
+                            <td>25 000</td>
+                            <td>120 000</td>
+                            <td>24 375</td>
+                            <td>117 000</td>
+                          </tr>
+                          <tr>
+                            <td class="text-danger">Total</td>
+                            <td class="text-danger">41 123</td>
+                            <td class="text-danger">201 110</td>
+                            <td class="text-danger">108 525</td>
+                            <td class="text-danger">406 899</td>
+                          </tr>
+                        </table>
+                        <em>
+                          Source : MINADER, 2020
+                        </em>
+                      </p>
+
+                      <p style="font-size: 12px;">
+                        <br><hr><span><b><a href="#">Analyse des contraintes de la filière riz</a></b></span>
+                        </a><br />
+                        <strong>Tableau  : Analyses des contraintes de la filière maïs </strong><br>
+                        <table class="table table-striped">
+                          <tr>
+                            <th>N°</th>
+                            <th>Contraintes</th>
+                            <th>Causes</th>
+                            <th>Axes de solutions</th>
+                          </tr>
+                          <tr>
+                            <td>1</td>
+                            <td>Pertes post-récolte élevées</td>
+                            <td>
+                              • Sous-capacité des unités de décorticage <br>
+                              • Vétusté et insuffisance des infrastructures de stockage                          
+                            </td>
+                            <td>
+                              • Améliorer les infrastructures et équipements existants <br>
+                              • Créer/mettre en place des nouvelles unités de transformations 
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Faible niveau de production </td>
+                            <td>
+                              • Coût élevé des intrants (engrais et semences) <br>
+                              • Non-respect des itinéraires techniques. <br>
+                              • Attaque des pestes (oiseaux granivores, etc…)
+                            </td>
+                            <td>
+                              • Appuyer l’acquisition des engrais <br>
+                              • Appuyer l’acquisition des semences <br>
+                              • Appui-conseil des producteurs <br>
+                              • Améliorer la lutte contre les pestes
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>Déficit de semences à haut rendement</td>
+                            <td>
+                              • Recherche orientée vers les semences à rendement moyen <br>
+                              • Déficit en personnel qualifié pour la recherche en riziculture                          
+                            </td>
+                            <td>
+                              • Appuyer la recherche pour l’obtention des semences à haut rendement <br>
+                              • Renforcer les capacités des semenciers privés (Coopératives, GIC et autres)
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>4</td>
+                            <td>Faible production des semences  </td>
+                            <td>
+                              • Potentiel des fermes semencières réduit. <br>
+                              • Faible accessibilité aux semences de qualité par les petits producteurs. <br>
+                              • Vétusté des infrastructures et équipements de production chez les principaux semenciers.                          
+                            </td>
+                            <td>
+                              • Réhabiliter les fermes semencières du MINADER <br>
+                              • Sensibiliser les  producteurs à l’utilisation des semences améliorées <br>
+                              • Mettre à la disposition des semenciers des infrastructures de production 
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>5</td>
+                            <td>Exportation frauduleuse de la production intérieure</td>
+                            <td>
+                              • Enclavement des  zones de production et éloignement des grands centres de consommation <br>
+                              • Insuffisance des fonds de roulement des sociétés sous-tutelle pour l’achat du Paddy 
+                            </td>
+                            <td>
+                              • Accompagner des petits producteurs à travers des crédits de campagne <br>
+                              • Encadrement social et juridique des petits producteurs autour des bassins <br>
+                              • Densifier le réseau routier des bassins de production, pour faciliter la collecte des produits;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>6</td>
+                            <td>Faible mécanisation de la production </td>
+                            <td>
+                              • Vétusté et insuffisance des engins de labour <br>
+                              • Inadaptation des engins à l’environnement ;
+                            </td>
+                            <td>
+                              • Acquérir de nouveaux équipements et engins de mécanisation <br>
+                              • Utiliser des équipements adaptés au milieu <br>
+                              • Former les utilisateurs d’engins
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>7</td>
+                            <td>Insuffisance des périmètres irrigués et sous-utilisation des certains périmètres</td>
+                            <td>
+                              • Moyens financiers limités <br>
+                              • Restrictions des prélèvements d’eau en campagne de contre-saison (fleuve Logone)
+                            </td>
+                            <td>
+                              • Aménagement/réhabilitation des périmètres irrigués <br>
+                              • Intensifier la production sur les périmètres viabilisés.
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>8</td>
+                            <td>Faible organisation des acteurs </td>
+                            <td>Synergie insuffisante des acteurs des différents maillons de la filière</td>
+                            <td>Appui à la structuration des acteurs </td>
+                          </tr>
+                        </table>
+                        <p>
+                          Le diagnostic de la filière riz fait ressortir des forces qui peuvent être considérées comme des leviers pour son développement. Des opportunités existent également et peuvent stimuler l`émergence de cette filière. Cependant on note toujours des faiblesses et des défis qui peuvent limiter l`atteinte des objectifs.
+                        </p>
+                      </p>
+
+                      <p style="font-size: 12px;">
+                        <br><hr><span><b><a href="#">Analyse Forces-Faiblesses-Opportunités-Menaces (FFOM)</a></b></span>
+                        </a><br />
+                        Par rapport aux principales thématiques que sont : l’accès au financement, la disponibilité de semences de qualité ; la disponibilité de technologies adaptées pour la production et la transformation, les facilités de commercialisation, les résultats de l’analyse se présentent ainsi qu’il suit : <br>
+                        <strong>Tableau  : Analyse des FFOM de la filière riziculture</strong><br>
+
+                        <table class="table table-striped text-center">
+                          <tr>
+                            <th style="text-align: center;">FORCES</th>
+                            <th style="text-align: center;">FAIBLESSES</th>
+                          </tr>
+                          <tr>
+                            <th colspan="2" style="text-align: center;">FINANCEMENT</th>
+                          </tr>
+                          <tr>
+                            <td>
+                              • Existence d’un manuel de procédures d’octroi des subventions ; <br>
+                              • Processus de structuration des différents maillons de la base au sommet en cours ;  <br>
+                              • Existence d’un capital d’expériences en matière d’organisation.
+                            </td>
+                            <td>
+                              • Difficultés d’accès aux financements bancaires ; <br>
+                              • Faible structuration des acteurs et absence d’interprofession ; <br>
+                              • Faible taux de bancarisation ; <br>
+                              • Faible niveau d’éducation financière des producteurs ; <br>
+                              • Faible fonctionnalité des organisations des acteurs.
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>OPPORTUNITES</th>
+                            <th>MENACES</th>
+                          </tr>
+                          <tr>
+                            <td>
+                              • Adoption d’une loi sur les interprofessions et identification de la filière riz parmi celles dont la structuration doit être accompagnée en priorité; <br>
+                              • Existence de la Stratégie Nationale de la Finance Inclusive.
+                            </td>
+                            <td>
+                              • Faible fonctionnalité des structures destinées au financement du secteur agricole ; <br>
+                              • Faible couverture des bassins de production en réseau téléphonique nécessaire pour les bons d’achat électroniques <br>
+                              • Insécurité dans les zones rurales et les bassins de production.
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>FORCES</th>
+                            <th>FAIBLESSES</th>
+                          </tr>
+                          <tr>
+                            <th colspan="2">SEMENCES</th>
+                          </tr>
+                          <tr>
+                            <td>
+                              • Existence des variétés de semences adaptées ; <br>
+                              • Existence d’un plan national de développement de semences agricoles ; <br> 
+                              • Existence de la SNDSR ; <br>
+                              • Inscription des variétés dans le catalogue officiel.
+                            </td>
+                            <td>
+                              • Faible qualification de la ressource humaine en inspection semencière de riz ; <br>
+                              • Difficulté dans la maintenance de la pureté des variétés de riz.
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>OPPORTUNITES</th>
+                            <th>MENACES</th>
+                          </tr>
+                          <tr>
+                            <td>
+                              • Existence des centres de recherche et des chercheurs qualifiée dotés des compétences orientées vers la filière riz ; <br>
+                              • Collaboration avec des partenaires techniques (AfricaRise et IRRI) ; <br>
+                              • Existence d’une politique nationale de semences végétales ; <br>
+                              • Existence de formations des spécialistes en semences.
+                            </td>
+                            <td>
+                              • Pureté variétale menacée par la non spécialisation des bassins de productions/variétés ; <br>
+                              • Faible traçabilité des semences cultivées.
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>FORCES</th>
+                            <th>FAIBLESSES</th>
+                          </tr>
+                          <tr>
+                            <th colspan="2">PRODUCTION</th>
+                          </tr>
+                          <tr>
+                            <td>
+                              • Existence d’un potentiel de production (Superficies et technologie) ; <br>
+                              • Existence d’un dispositif public d’encadrement technique dans les bassins de production rizicole ; <br>
+                              • Existence d’un savoir-faire endogène des acteurs ; <br>
+                              • Existence des structures de recherche sur les technologies de production et de transformation ; <br>
+                              • Disponibilité de la petite mécanisation propre à la riziculture (semoirs, moissonneuses batteuses, des désherbeuses et batteuses mécaniques) chez les petits producteurs en particulier ; <br>
+                              • Augmentation du nombre de producteurs et de bassins de production (UNDVA, SEMRY, AFRIFOOD, coopératives Nkoteng, Minta).
+                            </td>
+                            <td>
+                              • Etat de dégradation avancée des infrastructures hydro-agricoles ; <br>
+                              • Insuffisance des aménagements hydro agricoles ; <br>
+                              • Faible taux d’adoption des technologies de production ; <br>
+                              • Insuffisance de la main d’œuvre ;  <br>
+                              • Coût élevé des facteurs de production ; <br>
+                              • Faible mécanisation des opérations de production et post-récoltes ; <br>
+                              • Caractère atomisée de l’offre du riz pluvial de plateau ; <br>
+                              • Absence de cartographie détaillée de la fertilité des sols ; <br>
+                              • Coût élevé des opérations d’aménagement et de désenclavement des bassins de production rizicoles.
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>OPPORTUNITES</th>
+                            <th>MENACES</th>
+                          </tr>
+                          <tr>
+                            <td>
+                              Demande en augmentation croissante ;
+                            </td>
+                            <td>
+                              • Insécurité foncière ; <br>
+                              • Crise sécuritaire (N0SO et Boko haram) ;  <br>
+                              • Forte récurrence et intensité des effets négatifs des changements climatiques ; <br>
+                              • Pression parasitaires et prolifération des ennemies du riz.
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>FORCES</th>
+                            <th>FAIBLESSES</th>
+                          </tr>
+                          <tr>
+                            <th colspan="2">TRANSFORMATION</th>
+                          </tr>
+                          <tr>
+                            <td>
+                              • Existence d’une capacité de transformation artisanale, semi-industrielle et industrielle ; <br>
+                              • Existence d’un réseau de structures de recherche et de partenaires nationaux et internationaux associés à la promotion de la transformation.
+                            </td>
+                            <td>
+                              • Faible disponibilité des unités de transformation adaptée ; <br>
+                              • Faible desserte des bassins de productions en électricité ; <br>
+                              • Insuffisance des agents de maintenance qualifiés ; <br>
+                              • Faible niveau de transformation du riz. <br>
+                              • Insuffisance des infrastructures telles que les aires de séchages, les magasins de stockage du paddy et des produits finis ; <br>
+                              • Faible valorisation du riz en sous-produits
+                          
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>OPPORTUNITES</th>
+                            <th>MENACES</th>
+                          </tr>
+                          <tr>
+                            <td>
+                              • Existence de grandes, moyennes et petites unités de transformation sur le marché ; <br>
+                              • Existence des techniques de transformation du riz et de ses dérivés.
+                            </td>
+                            <td>
+                              • Coût élevé et faible accessibilité à l’énergie ;  <br>
+                              • Faible vulgarisation des techniques de transformation du riz et de ses dérivés; <br>
+                              • Faible qualité des équipements de transformation ; <br>
+                              • Rareté des pièces de rechanges des unités de production et de transformation ; <br>
+                              • Inexistence des contrats d’approvisionnement entre producteurs et transformateurs.
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>FORCES</th>
+                            <th>FAIBLESSES</th>
+                          </tr>
+                          <tr>
+                            <th colspan="2">COMMERCIALISATION</th>
+                          </tr>
+                          <tr>
+                            <td>
+                              • Existence d’un marché domestique en pleine croissance associés aux opportunités du commerce extérieur (ZLECAF) ; <br>
+                              • Intérêt croissant des distributeurs pour le riz local.
+                            </td>
+                            <td>
+                              • Forte hétérogénéité du riz local ; <br>
+                              • Faible performance du circuit de distribution de riz ; <br>
+                              • Absence d’une véritable stratégie marketing autour du riz local ; <br>
+                              • Problèmes dans le conditionnement (mélange de variétés de riz) et le packaging du riz ; <br>
+                              • Accroissement des coûts de transport (Mauvaise qualité des routes).
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>OPPORTUNITES</th>
+                            <th>MENACES</th>
+                          </tr>
+                          <tr>
+                            <td>
+                              • Existence d’un marché national croissant en riz ; <br>
+                              • Implémentation des initiatives menées par le MINCOMMERCE dans la commercialisation du riz local auprès des grandes surfaces ; <br>
+                              • Entrée en vigueur de la ZLECAF ; <br>
+                              • Crise sanitaire (Covid 19) et chocs divers. 
+                            </td>
+                            <td>
+                              • Forte concurrence du riz importé; <br>
+                              • Mauvais état des infrastructures routières.
+                            </td>
+                          </tr>
+                        </table>
+                      </p>
+
+                      <p style="font-size: 12px;">
+                        <br><hr><span><b><a href="#">Plan d’intensification de la production du riz au Cameroun</a></b></span>
+                        </a><br />
+                        Dans le cadre de ce plan, il s’agira pour le MINADER en 2023 : <br>
+                        • d’appuyer la recherche pour l’obtention des semences à haut rendement <br>
+                        • de réhabiliter la ferme semencière de Gazawa <br>
+                        • de renforcer les capacités infrastructurelles et en équipements de certains organismes et projets sous-tutelle impliqués dans la production semencière, entre autres la SEMRY, l’UNVDA, La FPRIAC et le PRODERIP <br>
+                        • d’appuyer la production et la diffusion des semences améliorées de riz <br>
+                        • d’aménager et de réhabiliter les périmètres irrigués <br>
+                        • d’appuyer l’acquisition et la diffusion des intrants (engrais)  <br>
+                        • d’appuyer l’acquisition de nouveaux équipements et engins de mécanisation adaptés au bassin de production (SEMRY, UNVDA, CENEEMA, etc) <br>
+                        • d’accroître les capacités de transformation, de conditionnement, et de stockage des organismes sous-tutelle et des coopératives.	 <br>
+                 <br>   Dans le cadre de l’opérationnalisation du plan de soutien à la filière riz, trois catégories d’acteurs sont pressenties: (i) les petits exploitants, (ii) les producteurs de semences et les instituts de recherche, (iii) les sociétés sous-tutelle et projets du MINADER. 
+                    Toutefois, les appuis traditionnels aux petits producteurs dans le cadre des projets du MINADER vont se poursuivre afin de garantir les revenus et la sécurité alimentaire et nutritionnelle. 
+
+                      </p>
+                    </div>
+
+                </div>
+                <!-- class="crd_page full" -->
+
+                <!-- END blocs/bloc_module.tpl -->
+            </article>
+
+            <aside id="annexes" class="col-xs-12 col-sm-3">
+              <div class="attr_image">                                                                                      
+                <a href="../img/glob.png" class="lightbox" rel="galerie">
+                  <img src="{% static 'img/glob.png' %}" width="263" height="157"   style="border: 0px  ;" alt="Logo partenaires tiers et associés" title="Logo partenaires tiers et associés"   />
+                  </a>  
+              </div>
+
+              <div id="contact">
+                <h2 class="contact">Contact</h2>    
+                <div class="attr_contact">
+                  <p style="font-size: 15px;">
+                    <a href="mailto:pfma@gmail.cm">
+                      <blockquote><span>contact@pfma.cm</span></blockquote>
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <br>
+              <div class="px-5">
+                <h3 class="text-primary px-5">Liens</h3>
+                <br><br> 
+                <ul>
+                  <li><a style="font-size: 15px;" href="https://www.cairn.info/revue-herodote-2008-4-page-156.htm">https://www.cairn.info/revue-herodote-2008-4-page-156.htm</a> </li> <br>
+                  <li><a style="font-size: 15px;" href="https://agritrade.cta.int/fr/Agriculture/Produits-de-base/Riz/Les-tendances-du-secteur-du-riz-en-Afrique-de-l-Ouest.html">https://agritrade.cta.int/fr/Agriculture/Produits-de-base/Riz/Les-tendances-du-secteur-du-riz-en-Afrique-de-l-Ouest.html</a> </li> <br>
+                  <li><a style="font-size: 15px;" href="https://www.planetoscope.com/cereales/192-production-de-riz-dans-le-monde.html">https://www.planetoscope.com/cereales/192-production-de-riz-dans-le-monde.html</a> </li> <br>
+                  <li><a style="font-size: 15px;" href="https://boowiki.info/template/wiki7_files/latest_003.png">BOOWIKI</a> </li> <br>
+                  <li><a style="font-size: 15px;" href="https://boowiki.info/art/le-commerce-international/riz-commerce.html">https://boowiki.info/art/le-commerce-international/riz-commerce.html</a> </li> <br>
+                  <li><a style="font-size: 15px;" href="https://agritrade.cta.int/fr/Agriculture/Produits-de-base/Riz">agritrade.cta</a> </li>
+                </ul>
+              </div>
+            </aside>
+        </div>
+    </div>
+
+</div>
+
+<footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+</footer>
+
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.bundle.min.js.map' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+    
+</body>
+</html>
