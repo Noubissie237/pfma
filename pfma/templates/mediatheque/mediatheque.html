@@ -25,7 +25,13 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/newcss/tiny-slider.css' %}" media="screen" />
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css.map' %}">
-    
+    <style>
+      #connect
+      {
+        float: right;
+        padding: 2vmin;
+      }
+    </style>
     
 </head>
 
@@ -60,20 +66,16 @@
         </div>
         <!-- END blocs/bloc_titresite.tpl -->
     
-        <span style="margin-left: 100rem;">
-          <button type="button" title="rechercher" style="border: 1px solid #aaa">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" color="#0012ba" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-            </svg>
-          </button>
-      
-          <a href="/inscription" title="Connexion/Inscription" style="text-decoration: none; margin-left: 2rem;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-              <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
-            </svg>
-            <span style="font-size: 18px;">Connexion/Inscription</span>
-          </a>
-        </span>
+        <div >
+          <span id="connect">  
+            <a href="/inscription" title="Connexion/Inscription" style="text-decoration: none; margin-left: 2rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+              </svg>
+              <span style="font-size: 18px;">Connexion/Inscription</span>
+            </a>
+          </span>
+        </div>
 
         <p class="menu hidden-md hidden-lg">
             <a class="btnMenu" href="#menuArborescenceMobile"></a>
@@ -133,19 +135,19 @@
           </li>
                        
           <li class="pos_3">
-            <a title="Les échanges" href="/inscription">
+            <a title="Les échanges" href="/chat/chat">
               <span class="lig1">ECHANGE</span>
             </a>
             
             <ul class="menudepth_2">
               <li>
-                <a href="/inscription">
+                <a href="/chat/chat">
                   <span class="lig1">Forum</span>
                 </a>
               </li>
               
               <li>
-                <a href="/inscription">
+                <a href="/chat/chat">
                   <span class="lig1">Video</span>
                 </a>
               </li>

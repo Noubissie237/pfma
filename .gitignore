@@ -1,3 +1,6 @@
 virtuel/
 .env
 __pycache__/
+justchat/
+justchatO/
+.gitignore
