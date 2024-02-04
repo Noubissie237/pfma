@@ -482,7 +482,7 @@
                             </ul>
                           </div>
                           <div class="col-4">
-                            <img src="../img/new.png" alt="map">
+                            <img src="{% static 'img/new.png' %}" alt="map">
                           </div>
                         </div>
                         <br>
@@ -535,65 +535,51 @@
                           <tr>
                             <th></th>
                             <th>Unité</th>
-                            <th>2020</th>
-                            <th>2021</th>
-                            <th>2022</th>
-                            <th>2023</th>
-                            <th>2024</th>
+                            {% for elt in data.OffreDemande  %}
+                              <th> {{ elt.annee }} </th>
+                            {% endfor %}
                           </tr>
                           <tr>
                             <td>Population</td>
                             <td>Habitant</td>
-                            <td>24 990 662</td>
-                            <td>25 594 168</td>
-                            <td>26 212 247</td>
-                            <td>26 845 253</td>
-                            <td>27 493 546</td>
+                            {% for elt in data.OffreDemande  %}
+                              <td> {{ elt.population }} </td>
+                            {% endfor %}
                           </tr>
                           <tr>
                             <td>Consommateurs (90%)</td>
                             <td>Tête</td>
-                            <td>22 491 596</td>
-                            <td>23 034 751</td>
-                            <td>23 591 023</td>
-                            <td>24 160 728</td>
-                            <td>24 744 191</td>
+                            {% for elt in data.OffreDemande  %}
+                              <td> {{ elt.consommateur }} </td>
+                            {% endfor %}
                           </tr>
                           <tr>
                             <td>Consommation par tête</td>
                             <td>Kg</td>
-                            <td>25,7</td>
-                            <td>25,8</td>
-                            <td>25,9</td>
-                            <td>26,1</td>
-                            <td>26,2</td>
+                            {% for elt in data.OffreDemande  %}
+                              <td> {{ elt.consommateur_par_tete }} </td>
+                            {% endfor %}
                           </tr>
                           <tr>
                             <td>Demande totale (1)</td>
                             <td>Tonne</td>
-                            <td>576 949</td>
-                            <td>593 875</td>
-                            <td>611 358</td>
-                            <td>629 421</td>
-                            <td>648 085</td>
+                            {% for elt in data.OffreDemande  %}
+                              <td> {{ elt.demande_total }} </td>
+                            {% endfor %}
                           </tr>
                           <tr>
                             <td>Offre (2)</td>
                             <td>Tonne</td>
-                            <td>115 763</td>
-                            <td>121 551</td>
-                            <td>127 628</td>
-                            <td>134 010</td>
-                            <td>140 710</td>
+                            {% for elt in data.OffreDemande  %}
+                              <td> {{ elt.offre }} </td>
+                            {% endfor %}
                           </tr>
                           <tr>
                             <td class="text-danger">Gap (3) = (2)-(1)</td>
                             <td class="text-danger">Tonne</td>
-                            <td class="text-danger">-461 186</td>
-                            <td class="text-danger">-472 324</td>
-                            <td class="text-danger">-483 730</td>
-                            <td class="text-danger">-495 411</td>
-                            <td class="text-danger">-507 375</td>
+                            {% for elt in data.OffreDemande  %}
+                              <td style="color:red"> {{ elt.gap }} </td>
+                            {% endfor %}
                           </tr>
                         </table>
                         <em>
@@ -806,117 +792,22 @@
                             <th>Production actuelle (riz marchand) (T)/campagne</th>
                             <th>Production potentielle (riz marchand)/ campagne</th>
                           </tr>
+                          {% for elt in data.acteur_et_potentielle  %}
                           <tr>
-                            <td>SEMRY (périmètres irrigués de Yagoua et de Maga)</td>
-                            <td>10 000</td>
-                            <td>20 000</td>
-                            <td>60 000</td>
-                            <td>120 000</td>
+                            <td> {{ elt.acteur }} </td>
+                            <td> {{ elt.superficie_exploite }} </td>
+                            <td> {{ elt.superficie_potentielle }} </td>
+                            <td> {{ elt.production_actuelle }} </td>
+                            <td> {{ elt.production_potentielle }} </td>
                           </tr>
-                          <tr>
-                            <td>UNVDA (Ndop)</td>
-                            <td>1 530</td>
-                            <td>14000</td>
-                            <td>18 000</td>
-                            <td>96 000</td>
-                          </tr>
-                          <tr>
-                            <td>PDRI (Logone et Chari)</td>
-                            <td>1 500</td>
-                            <td>1 500</td>
-                            <td>1 950</td>
-                            <td>1 950</td>
-                          </tr>
-                          <tr>
-                            <td>Lagdo</td>
-                            <td>600</td>
-                            <td>17 000</td>
-                            <td>1500 </td>
-                            <td>42 500</td>
-                          </tr>
-                          <tr>
-                            <td>SODERIM (Santchou)</td>
-                            <td>50</td>
-                            <td>3 000</td>
-                            <td>48</td>
-                            <td>6000</td>
-                          </tr>
-                          <tr>
-                            <td>Mont Mbappit (Noun)</td>
-                            <td>300</td>
-                            <td>1500</td>
-                            <td>400</td>
-                            <td>3000</td>
-                          </tr>
-                          <tr>
-                            <td>PADFA (Menchum Valley)</td>
-                            <td>65</td>
-                            <td>200</td>
-                            <td>84</td>
-                            <td>84</td>
-                          </tr>
-                          <tr>
-                            <td>Projet Moulvoudaye (Moulvoudaye)</td>
-                            <td>250</td>
-                            <td>600</td>
-                            <td>240</td>
-                            <td>576</td>
-                          </tr>
-                          <tr>
-                            <td>PADFA (Vallée Bénoué, Guider, Sittibirilli (Ext Nord))</td>
-                            <td>1 608</td>
-                            <td>2 120</td>
-                            <td>1 567</td>
-                            <td>1567</td>
-                          </tr>
-                          <tr>
-                            <td>PLANUT (Logone et Chari)</td>
-                            <td>0</td>
-                            <td>20 000</td>
-                            <td>0</td>
-                            <td>17 000</td>
-                          </tr>
-                          <tr>
-                            <td>Ferme pilote Avangane (NKoteng)</td>
-                            <td>40</td>
-                            <td>60</td>
-                            <td>78</td>
-                            <td>78</td>
-                          </tr>
-                          <tr>
-                            <td>Bassin émergeant de la Haute Sanaga</td>
-                            <td>100</td>
-                            <td>100</td>
-                            <td>195</td>
-                            <td>130</td>
-                          </tr>
-                          <tr>
-                            <td>Afrifood</td>
-                            <td>30</td>
-                            <td>30</td>
-                            <td>39</td>
-                            <td>39</td>
-                          </tr>
-                          <tr>
-                            <td>PADFA (Bassin rizicole de Tonga)</td>
-                            <td>50</td>
-                            <td>1 000</td>
-                            <td>49</td>
-                            <td>975</td>
-                          </tr>
-                          <tr>
-                            <td>PRODERIP (zones de forêt à pluviométrie bimodale) et autres producteurs de riz pluvial</td>
-                            <td>25 000</td>
-                            <td>120 000</td>
-                            <td>24 375</td>
-                            <td>117 000</td>
-                          </tr>
+                          {% endfor %}
+
                           <tr>
                             <td class="text-danger">Total</td>
-                            <td class="text-danger">41 123</td>
-                            <td class="text-danger">201 110</td>
-                            <td class="text-danger">108 525</td>
-                            <td class="text-danger">406 899</td>
+                            <td class="text-danger">{{ data.sommeSuperficieExploite }}</td>
+                            <td class="text-danger">{{ data.sommeSuperficePotentielle }}</td>
+                            <td class="text-danger">{{ data.sommeProductionActuelle }}</td>
+                            <td class="text-danger">{{ data.sommeProductionPotentielle }}</td>
                           </tr>
                         </table>
                         <em>
@@ -1279,6 +1170,25 @@
                 </div>
               </div>
               <br>
+              <div class="px-5">
+                <h3 class="text-primary px-5">Documents</h3>
+                <br><br> 
+                <a style="font-size: 15px;" href="{% static 'docs/Fiche_idée_de_projet.docx' %}" title="Lien vers le document">
+                  <span><b>Fiche d'idées de projets</b></span>
+                </a><br />
+
+                <br><br> 
+                <a style="font-size: 15px;" href="{% static 'docs/fiche_Projet _Feux_de_brousse.docx' %}" title="Lien vers le document">
+                  <span><b>Projet Feux de brousses</b></span>
+                </a><br />
+
+                <br><br> 
+                <a style="font-size: 15px;" href="{% static 'docs/situation_de_riz 2018_2023.xlsx' %}" title="Lien vers le document">
+                  <span><b>situation de riz 2018 - 2023</b></span>
+                </a><br />
+              </div>
+              <br>
+
               <div class="px-5">
                 <h3 class="text-primary px-5">Liens</h3>
                 <br><br> 

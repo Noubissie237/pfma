@@ -1,16 +1,64 @@
 from django.shortcuts import render
 from .forms import UsersForm
 from django.contrib.auth.decorators import login_required
+from .models import *
 
 # Create your views here.
 def home(request):
     return render(request, 'home.html')
 
 def direct(request):
-    return render(request, 'acteurs/direct.html')
+    producteurs = Producteur.objects.all()
+    transformateurs = Tranformateur.objects.all()
+    importateurs = Importateur.objects.all()
+    consommateurs = Consommateur.objects.all()
+
+    context = {
+        'producteurs' : producteurs,
+        'transformateurs' : transformateurs,
+        'importateurs' : importateurs,
+        'consommateurs' : consommateurs
+    }
+
+    return render(request, 'acteurs/direct.html', context={'data' : context})
 
 def indirect(request):
-    return render(request, 'acteurs/indirect.html')
+    vendeurs = Vendeur.objects.all()
+    etablissements = Etablissement.objects.all()
+
+    context = {
+        'vendeurs' : vendeurs,
+        'etablissements' : etablissements
+    }
+
+    return render(request, 'acteurs/indirect.html', context={'data' : context})
+
+def general(request):
+    data = OffreDemande.objects.all()
+    acteur_et_potentielle = ActeurEtPotentiel.objects.all()
+    sommeSuperficieExploite = 0
+    sommeSuperficePotentielle = 0
+    sommeProductionActuelle = 0
+    sommeProductionPotentielle = 0
+    list_somme = []
+    for elt in acteur_et_potentielle:
+        sommeSuperficieExploite += elt.superficie_exploite
+        sommeSuperficePotentielle += elt.superficie_potentielle
+        sommeProductionActuelle += elt.production_actuelle
+        sommeProductionPotentielle += elt.production_potentielle
+    
+
+    
+    context = {
+        'OffreDemande' : data,
+        'acteur_et_potentielle' : acteur_et_potentielle,
+        'sommeSuperficieExploite' : sommeSuperficieExploite,
+        'sommeSuperficePotentielle' : sommeSuperficePotentielle,
+        'sommeProductionActuelle' : sommeProductionActuelle,
+        'sommeProductionPotentielle' : sommeProductionPotentielle,
+    }
+
+    return render(request, 'sir/general.html', context={'data' : context})
 
 def institutionnel(request):
     return render(request, 'acteurs/institutionnel.html')
@@ -51,8 +99,6 @@ def hand(request):
 def commercial(request):
     return render(request, 'sir/commercial.html')
 
-def general(request):
-    return render(request, 'sir/general.html')
 
 def technique(request):
     return render(request, 'sir/technique.html')
@@ -68,8 +114,9 @@ def formRegistration(request):
         form = UsersForm(request.POST)
         if form.is_valid():
             print(form.cleaned_data)
-            form.save()
-            return render(request, 'needRegistration/home.html')
+            data = form.cleaned_data
+            print(data['nom'])
+            return render(request, 'needRegistration/home.html', context={"User" : form.cleaned_data['nom']})
         
     form = UsersForm()
     return render(request, "logOrReg/registration.html", {"form" : form})

@@ -422,46 +422,19 @@
                             <th>Contact</th>
                             <th>Site internet </th>
                           </tr>
-                          <tr>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                          </tr>
-                          <tr>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                          </tr>
-                          <tr>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                          </tr>
-                          <tr>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                          </tr>
+                          {% for elt in data.producteurs  %}
+                              <tr>
+                                <td> {{ elt.region }} </td>
+                                <td> {{ elt.nom_op }} </td>
+                                <td> {{ elt.producteur_paddy_semences }} </td>
+                                <td> {{ elt.capacite }} </td>
+                                <td> {{ elt.superfice }} </td>
+                                <td> {{ elt.localisation }} </td>
+                                <td> {{ elt.contact }} </td>
+                                <td> <a href="{{ elt.site_internet }}">{{ elt.site_internet }}</a> </td>
+                              </tr>
+                          {% endfor %}
+
                         </table>
                       </p>
                       <br><br><hr>
@@ -487,46 +460,19 @@
                             <th>Contact</th>
                             <th>Site internet </th>
                           </tr>
-                          <tr>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>SEMRY</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                          </tr>
-                          <tr>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>UNVDA</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                          </tr>
-                          <tr>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>COOPERATIVES DE PADFA</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                          </tr>
-                          <tr>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                          </tr>
+
+                          {% for elt in data.transformateurs  %}
+                              <tr>
+                                <td> {{ elt.id }} </td>
+                                <td> {{ elt.region }} </td>
+                                <td> {{ elt.nom_transformateur }} </td>
+                                <td> {{ elt.capacite }} </td>
+                                <td> {{ elt.zone_de_transformation }} </td>
+                                <td> {{ elt.localisation }} </td>
+                                <td> {{ elt.contact }} </td>
+                                <td> <a href="{{ elt.site_internet }}">{{ elt.site_internet }}</a> </td>
+                              </tr>
+                          {% endfor %}
                         </table>
                       </p>
                       <br><br><hr>
@@ -553,56 +499,19 @@
                             <th>Contact</th>
                             <th>Site internet </th>
                           </tr>
-                          <tr>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>SONAM Cameroun </td>
-                            <td>(226 816 tonnes)</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                          </tr>
-                          <tr>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>OLAM CAM SA </td>
-                            <td>(178 690 tonnes)</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                          </tr>
-                          <tr>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>AGRIEX Cameroon Sarl</td>
-                            <td>(157 128 tonnes)</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                          </tr>
-                          <tr>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>UNVDA</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                          </tr>
-                          <tr>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>SEMRY</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                          </tr>
+                          {% for elt in data.importateurs  %}
+                              <tr>
+                                <td> {{ elt.id }} </td>
+                                <td> {{ elt.region }} </td>
+                                <td> {{ elt.nom_distributeur }} </td>
+                                <td> ({{ elt.capacite }} tonnes) </td>
+                                <td> {{ elt.zone_importation }} </td>
+                                <td> {{ elt.localisation }} </td>
+                                <td> {{ elt.contact }} </td>
+                                <td> <a href="{{ elt.site_internet }}">{{ elt.site_internet }}</a> </td>
+                              </tr>
+                          {% endfor %}
+
                         </table>
                       </p>
                       <br><br><hr>
@@ -624,46 +533,20 @@
                             <th>Contact</th>
                             <th>Site internet </th>
                           </tr>
-                          <tr>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                          </tr>
-                          <tr>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                          </tr>
-                          <tr>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                          </tr>
-                          <tr>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                          </tr>
-                          <tr>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                          </tr>
+
+                          {% for elt in data.consommateurs  %}
+                              <tr>
+                                <td> {{ elt.id }} </td>
+                                <td> {{ elt.region }} </td>
+                                <td> {{ elt.nom_association }} </td>
+                                <td> {{ elt.type_intrants }} </td>
+                                <td> {{ elt.zone_intervention }} </td>
+                                <td> {{ elt.localisation }} </td>
+                                <td> {{ elt.contact }} </td>
+                                <td> <a href="{{ elt.site_internet }}">{{ elt.site_internet }}</a> </td>
+                              </tr>
+                          {% endfor %}
+       
                         </table>
                       </P>
                       <br><br><hr>

@@ -424,56 +424,18 @@
                             <th>Contact</th>
                             <th>Site internet </th>
                           </tr>
-                          <tr>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>Yara Cameroun</td>
-                            <td>Engrais et pesticides </td>
-                            <td>Cameroun</td>
-                            <td>Douala</td>
-                            <td>...</td>
-                            <td><a href="https://www.yara.cm">https://www.yara.cm</a></td>
-                          </tr>
-                          <tr>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>SOLEVO CAMEROUN</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                          </tr>
-                          <tr>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                          </tr>
-                          <tr>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                          </tr>
-                          <tr>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                          </tr>
+                          {% for elt in data.vendeurs  %}
+                              <tr>
+                                <td> {{ elt.id }} </td>
+                                <td> {{ elt.region }} </td>
+                                <td> {{ elt.nom_vendeur }} </td>
+                                <td> {{ elt.type_intrants }} </td>
+                                <td> {{ elt.zone_intervention }} </td>
+                                <td> {{ elt.localisation }} </td>
+                                <td> {{ elt.contact }} </td>
+                                <td> <a href="{{ elt.site_internet }}">{{ elt.site_internet }}</a> </td>
+                              </tr>
+                          {% endfor %}
                         </table>
                       </p>
 
@@ -497,51 +459,19 @@
                             <th>Contact</th>
                             <th>Site internet </th>
                           </tr>
-                          <tr>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>Crédit du sahel  </td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                          </tr>
-                          <tr>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>Afriland first bank</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                          </tr>
-                          <tr>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                          </tr>
-                          <tr>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                          </tr>
-                          <tr>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                          </tr>
+
+                          {% for elt in data.etablissements  %}
+                              <tr>
+                                <td> {{ elt.id }} </td>
+                                <td> {{ elt.region }} </td>
+                                <td> {{ elt.nom_etablissement }} </td>
+                                <td> {{ elt.zone_intervention }} </td>
+                                <td> {{ elt.localisation }} </td>
+                                <td> {{ elt.contact }} </td>
+                                <td> <a href="{{ elt.site_internet }}">{{ elt.site_internet }}</a> </td>
+                              </tr>
+                          {% endfor %}
+
                         </table>
                       </p>
                       <br><br><hr>

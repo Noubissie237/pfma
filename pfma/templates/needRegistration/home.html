@@ -1,11 +1,765 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]><html lang="fr-FR" class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html lang="fr-FR" class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html lang="fr-FR" class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html lang="fr-FR" class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="fr-FR" class="no-js">
+<!--<![endif]-->
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="alternate" type="application/rss+xml" title="Flux des actualités du Projet MARIGO" href="RSS/actualites.rss" />
+  <title>PFMA, Rizière de riz au Cameroun</title>
+  <link rel="shortcut icon" href="{% static 'img/log1.ico' %}" type="image/x-icon">
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+  <link rel="stylesheet" type="text/css" href="{% static 'css/newcss/general.css' %}" media="screen" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/newcss/print.css' %}" media="print" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/newcss/font-awesome.min.css' %}" media="screen" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css//newcss/mmenu.css' %}" media="screen" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/newcss/tiny-slider.css' %}" media="screen" />
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css.map' %}">
+  <style>
+    #connect
+    {
+      float: right;
+      padding: 2vmin;
+    }
+  </style>
 </head>
-<body>
-    Access reservé !
+
+<body data-node="105" data-langue="fr-FR" data-classe="crd_site" data-nodeid="105" class="crd_site mep_accueil not_connected" data-path="/1/2/105/" itemscope itemtype="http://schema.org/WebPage">
+  
+  <!-- START blocs/accessiblite.tpl -->
+  <ul id="menu_accessibilite">
+    <li><a href="#contenu">Aller au contenu de la page</a></li>
+    <li><a href="#sitenav">Aller au menu de navigation</a></li>
+    <li><a href="#basdepage">Aller au bas de page</a></li>
+  </ul>
+  <!-- END blocs/accessiblite.tpl -->
+
+  <div id="container" class="container-fluid">
+    <header class="row">
+      <!-- BEGIN blocs/bloc_titresite.tpl -->
+      <div id="titre_site"> 
+        <div class="hgroup" title="Projet MARIGO">
+          <h1><a href="/">Projet MARIGO</a></h1>
+          <h2><a href="/">Culture du riz périurbain au Cameroun</a></h2>
+        </div>
+
+        <div id="logo">
+          <a href="#" style="text-decoration: none;">
+            <!-- <img src="{% static 'img/logo.jpg'%}" alt="" style="width: 15rem;"> -->
+            <img src="{% static 'img/logo.jpg'%}" alt="">
+          </a>
+          <span class="TitleSite">
+            Plateforme Multi-Acteurs de la Chaîne de Valeur riz au Cameroun
+          </span>
+        </div>
+      </div>
+      <!-- END blocs/bloc_titresite.tpl -->
+
+      <div id="con">
+        <span id="connect">  
+          <a href="/inscription" title="Connexion/Inscription" style="text-decoration: none; margin-left: 2rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+              <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+            </svg>
+            <span class="text" style="font-size: 18px;">{{ User }}</span>
+          </a>
+        </span>
+      </div>
+
+      <p class="menu hidden-md hidden-lg">
+        <a class="btnMenu" href="#menuArborescenceMobile"></a>
+        <span>MENU</span>
+      </p>
+
+    </header>
+    
+    <nav id="menuRubriques" class="hidden-xs hidden-sm ">
+      <ul class="sf-menu menudepth_1 mon" >          
+        <li class="pos_1 courant">
+          <a title="Accueil" href="./">
+            <span class="lig1">ACCUEIL</span>
+          </a>
+          <ul class="menudepth_2">
+            <li>
+              <a href="#descriptif"><span class="lig1">Descriptif du Projet</span></a>
+            </li>
+          </ul>
+        </li>
+        
+        <li class="pos_2">
+          <a title="Les acteurs" href="direct/">
+            <span class="lig1">ACTEURS</span>
+          </a>
+
+          <ul class="menudepth_3">
+
+            <li>
+              <a href="institutionnel/"><span class="lig1">acteur institutionnel</span></a>
+              <ul class="menudepth_2" style="background-color: #2d5140;">
+                <li><a href="institutionnel/#depMin"><span class="lig1">Departements ministériels</span></a></li>
+                <li><a href="institutionnel/#sstpg"><span class="lig1">Sociétés sous-tutelle & les projets programmes</span></a></li>
+                <li><a href="institutionnel/#ptf"><span class="lig1">Partenaires techniques & financiers (PTF)</span></a></li>
+                <li><a href="institutionnel/#snra"><span class="lig1">Système nationale de recherche agricole</span></a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="direct/"><span class="lig1">acteur direct</span></a>
+              <ul class="menudepth_2" >
+                <li><a href="direct/#producteur"><span class="lig1">Producteurs</span></a></li>
+                <li><a href="direct/#transformateur"><span class="lig1">Transformateurs</span></a></li>
+                <li><a href="direct/#distributeur"><span class="lig1">Distributeurs</span></a></li>
+                <li><a href="direct/#consommateur"><span class="lig1">consommateurs</span></a></li>
+              </ul>    
+            </li>
+
+            <li> 
+              <a href="indirect/">
+                <span class="lig1">acteur indirect</span>
+              </a>
+              <ul class="menudepth_2" >
+                <li><a href="indirect/#presta"><span class="lig1">Prestataires des services de labour</span></a></li>
+                <li><a href="indirect/#etab"><span class="lig1">Etablissements financiers & banques</span></a></li>
+              </ul>          
+            </li>
+          </ul>
+        </li>
+                     
+        <li class="pos_3">
+          <a title="Les échanges" href="/chat/chat">
+            <span class="lig1">ECHANGE</span>
+          </a>
+          
+          <ul class="menudepth_2">
+            <li>
+              <a href="/chat/chat">
+                <span class="lig1">Forum</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="/conference">
+                <span class="lig1">Video</span>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+                      
+        <li class="pos_4">
+          <a title="Le Système d'Informations sur le Riz" href="/general">
+            <span class="lig1">S. I. R </span>
+          </a>
+            
+          <ul class="menudepth_2">
+            <li>
+              <a href="/general">
+                <span class="lig1">Informations Générales</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="/general">
+                <span class="lig1">Informations Commerciales</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="/general">
+                <span class="lig1">Informations Techniques</span>
+              </a>
+            </li>
+
+          </ul>
+        </li>
+                                    
+        <li class="pos_5 pos_last">
+          <a title="La médiathèque" href="/mediatheque">
+            <span class="lig1"> médiathèque</span>
+          </a>
+
+        </li>
+
+        <li class="pos_5 pos_last">
+          <a title="La Bibliotheque" href="/bibliotheque"><span class="lig1"> Bibliotheque</span></a>          
+          <ul class="menudepth_2">
+            <li>
+              <a href="/bibliotheque"><span class="lig1">Livre techniques</span></a>
+            </li>
+           </ul>
+        </li>
+
+        <li>
+          <a href="/hand" >Hand in Hand</a>
+        </li>
+
+      </ul>
+    </nav>
+    
+    <nav id="menuArborescenceMobile" class="masqueMenu">
+      <ul class="menu menudepth_1">                          
+        <li class="pos_1">
+          <a title="Accueil" href="./">
+            <span class="lig1">Le projet</span>
+          </a>
+             
+          <ul class="menudepth_2">
+            <li>
+              <a href="/le-projet/descriptif-du-projet"><span class="lig1">Descriptif du Projet</span></a>
+            </li>
+          </ul>
+        </li>
+                    
+        <li class="pos_2">
+          <a title="Les partenaires et le bailleur" href="/les-partenaires-et-le-bailleur">
+            <span class="lig1">Les partenaires et le bailleur</span>
+          </a>
+            
+          <ul class="menudepth_2">
+            <li>
+              <a href="#">
+                <span class="lig1">Institution publique</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <span class="lig1">Institution privée</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <span class="lig1">Oragnisation paysannes</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <span class="lig1">Particuliers</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+                      
+        <li class="pos_3">
+          <a title="Les activités" href="/les-activites">
+            <span class="lig1">Les activités</span>
+          </a>
+           
+          <ul class="menudepth_2">
+            <li>
+              <a href="/les-activites/plateforme-multi-acteurs"><span class="lig1">Plateforme multi-acteurs</span></a>
+            </li>
+
+            <li>
+              <a href="/inscription"><span class="lig1">Diagnostic et évaluation</span></a>
+            </li>
+
+            <li>
+              <a href="/les-activites/sante-des-sols"><span class="lig1">Santé des sols</span></a>
+            </li>
+
+            <li>
+              <a href="/les-activites/sante-des-plantes"><span class="lig1">Santé des plantes</span></a>
+            </li>
+
+            <li>
+              <a href="/les-activites/conservation-transformation-qualite"><span class="lig1">Conservation, transformation, qualité</span></a>
+            </li>
+
+            <li>
+              <a href="/les-activites/formation-et-diffusion"><span class="lig1">Formation et diffusion</span></a>
+            </li>
+
+          </ul>
+        </li>
+                     
+        <li class="pos_4">
+          <a title="La communication du projet" href="/la-communication-du-projet"><span class="lig1">La communication du projet</span></a>
+          <ul class="menudepth_2">
+            <li>
+              <a href="/la-communication-du-projet/rapports"><span class="lig1">Rapports</span></a>
+            </li>
+            
+            <li>
+              <a href="/"><span class="lig1">Actualités</span></a>
+            </li>
+
+            <li>
+              <a href="/la-communication-du-projet/support-de-communication"><span class="lig1">Support de communication</span></a>
+            </li>
+          </ul>
+        </li>
+                                                   
+        <li class="pos_5 pos_last">
+          <a title="La médiathèque" href="/la-mediatheque"><span class="lig1">La médiathèque</span></a>                 
+          <ul class="menudepth_2">
+            <li>
+              <a href="/la-mediatheque/photos-wp1-plateforme-multi-acteurs"><span class="lig1">Photos - WP1 plateforme multi-acteurs</span></a>
+            </li>
+
+            <li>
+              <a href="/la-mediatheque/photos-wp2-diagnostic-et-evaluation"><span class="lig1">Photos - WP2 Diagnostic et évaluation</span></a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <nav id="menuAriane" class="row hidden-xs">
+      <p id="nav_ariane" class="breadcrumbs" itemprop="breadcrumb"><span class="libelle">Vous êtes ici&nbsp;:</span>    
+        <span class="bc1">
+          <a href="/">
+            <span class="home">
+              <span class="lig1">marigo</span>
+            </span>
+          </a>
+        </span>
+      </p>
+      <!-- END blocs/menu_ariane.tpl -->
+    </nav>
+
+    <div id="main">
+      <div class="row">
+        <article id="contenu" class="">
+          <!-- BEGIN blocs/bloc_module.tpl -->
+
+          <div  class="crd_site full">
+          </div><!-- class="crd_site full" -->
+
+
+          <!-- END blocs/bloc_module.tpl -->
+
+          <div class="contenu1">      
+            <div class="attr_contenu1">      
+              <div class="">
+                <div  class="crd_galerie embed">
+                  <div class="cycle original">
+                    <div>
+                      <img src="{% static 'img/riz3.jpeg' %}" width="2000" height="350"  style="border: 0px ;" alt="Récolte du riz.  © V. Bancal" title="Récolte du riz.  © V. Bancal"   />
+                    </div>
+                    
+                    <div style="display:none">                                                                     
+                      <img src="{% static '/var/proj_marigo/storage/images/media/images/diaporama/degats-de-tuta-absoluta.-c-g.-alla/34479-1-fre-FR/degats-de-tuta-absoluta.-c-g.-alla.jpg' %}" width="2000" height="350"   style="border: 0px  ;" alt="dégâts de tuta absoluta. © G. Alla" title="dégâts de tuta absoluta. © G. Alla"   />
+                    </div>
+
+                    <div style="display:none">
+                      <img src="{% static '/var/proj_marigo/storage/images/media/images/diaporama/parcelle-maraichere-diversifiee-a-korhogo.-c-g.-alla/34483-1-fre-FR/parcelle-maraichere-diversifiee-a-korhogo.-c-g.-alla.jpg' %}" width="2000" height="350"   style="border: 0px  ;" alt="Parcelle maraîchère diversifiée à Korhogo. © G. Alla" title="Parcelle maraîchère diversifiée à Korhogo. © G. Alla"   />
+                    </div>
+
+                    <div style="display:none">
+                      <img src="{% static '/var/proj_marigo/storage/images/media/images/diaporama/vente-de-produits-maraichers-au-bord-de-la-route.-c-th.-martin/34487-1-fre-FR/vente-de-produits-maraichers-au-bord-de-la-route.-c-th.-martin.jpg' %}" width="2000" height="350"   style="border: 0px  ;" alt="Vente de produits maraichers au bord de la route. © Th. Martin" title="Vente de produits maraichers au bord de la route. © Th. Martin"   />
+                    </div>
+
+                    <div style="display:none">                                                                         
+                      <img src="{% static 'img/riz1.jpeg' %}" width="2000" height="350"   style="border: 0px  ;" alt="Cultures de riz à Songo. © Th. Martin" title="Cultures de riz à Songo. © Th. Martin"   />
+                    </div>
+                  </div>
+                </div>
+                <!-- class="crd_galerie embed" -->
+              </div>
+            </div>
+          </div>
+          
+          <div class="contenu2">
+            <div class="attr_contenu2">
+              <p>
+                Les acteurs de la filière riz au Cameroun se mettent ensemble pour relever les défis
+              </p>
+            </div>
+          </div>
+          
+          <div class="contenu3">
+            <div class="attr_contenu3">
+              <h2>Dernières actualités...</h2>
+              <div class="">
+                <div  class="crd_dossier_actus embed">
+                  <ul class="actus">
+                    <li title="Mouches des fruits; quelles innovations agroécologiques pour la lutte?">
+                      <div  class="crd_actualite line cls_Publication cls_Institutionnel cls_Science cls_Lagalaxieetaudela">
+                        <div class="attr_image">
+                        </div>
+      
+                        <p class="attr_name">
+                          <a href="/">
+                            <span class="lig1">La production nationale de riz en 2020 est estimée à 115 000 tonnes, issue essentiellement des bassins de production des régions du Nord, de l’Extrême Nord et du Nord-Ouest. Les acteurs majeurs du secteur sont des entreprises publiques telles que la SEMRY et l’UNVDA.</span>    
+                          </a>
+                        </p>
+
+                        <p class="attr_date_debut">
+                          31/05/2023  
+                        </p>
+
+                        <p class="attr_accroche"> 
+                          <p class="lien read_more">
+                            <a href="/">Lire la suite</a>
+                          </p>
+                        </p>
+  
+                      </div>
+                      <!-- class="crd_actualite line" -->
+                    </li>
+
+                    <li title=" Rencontre régionale des Systèmes Participatifs de Garantie (SPG) d'Afrique de l'Ouest et Centrale">
+                      <div  class="crd_actualite line cls_Publication cls_Institutionnel cls_Science cls_Lagalaxieetaudela">
+                        <div class="attr_image">
+                        </div>
+      
+                        <p class="attr_name">
+                          <a href="/">
+                            <span class="lig1">La région de l’Extrême-Nord produit environ les 2/3 à travers 180 000 personnes directement impliquées dans les activités rizicoles, soit un peu plus de 27 000 ménages (SNDR, 2009). </span>    
+                          </a>
+                        </p>
+
+                        <p class="attr_date_debut">
+                          23/05/2023  
+                        </p>
+
+                        <p class="attr_accroche">
+                          <p class="lien read_more">
+                            <a href="/">Lire la suite</a>
+                          </p>
+                        </p>
+  
+
+                      </div>
+                      <!-- class="crd_actualite line" -->
+                    </li>
+                    
+                    <li title="Visite de l’ambassadrice de l’Union européenne au Cameroun chez des producteurs pilotes du Projet MARIGO">
+                      <div  class="crd_actualite line cls_Annonce cls_Institutionnel cls_Lagalaxieetaudela">
+                        <div class="attr_image">
+                        </div>
+
+                        <p class="attr_name">
+                          <a href="/">
+                            <span class="lig1">Les importations de riz ont évolué à la hausse depuis la fin des années 2000. En 2019, selon les statistiques officielles du Ministère du Commerce, le Cameroun a importé 833 000 tonnes de riz.</span>    
+                          </a>
+                        </p>
+
+                        <p class="attr_date_debut">
+                          28/11/2022  
+                        </p>
+
+                        <p class="attr_accroche">
+                          <p class="lien read_more">
+                            <a href="/">Lire la suite</a>
+                          </p>
+                        </p>
+                      </div>
+
+                      <!-- class="crd_actualite line" -->
+                    </li>
+                  </ul>
+
+                  <p class="show_more">
+                    <a href="/">Lire toutes les actualités</a>
+                  </p>
+ 
+                  <br><br><br>
+
+                  <h2 id="descriptif">Descriptif du projet...</h2><br>
+
+                  <!-- Descriptif du projet !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                  <div class="">
+                    <div  class="crd_dossier_actus embed">   
+                            <!-- PREMIER BLOC DES DESCRIPTIFS  -->
+                      <ul class="actus">
+                        <li>
+                          <div  class="crd_actualite line cls_Publication cls_Institutionnel cls_Science cls_Lagalaxieetaudela">
+                            <div class="attr_image">     
+                              <!-- var/proj_marigo/storage/images/marigo//35492-1-fre-FR/mouches-des-fruits-quelles-innovations-agroecologiques-pour-la-lutte_large.jpg -->
+                            </div>
+                            <h3 align="center">Justification</h3>
+                            <p class="attr_name">
+                              <a href="/justification">
+                                <span class="lig1">À l'échelle mondiale, le riz est la troisième céréale après le blé et le maïs. Elle est cultivée aujourd'hui dans plus d'une centaine de pays avec une production en progression constante.</span>    </a>
+                            </p>
+                          
+                            <p class="attr_date_debut">
+                              31/05/2023  
+                            </p>
+                          
+                            <p class="attr_accroche">
+                              <p class="lien read_more">
+                                <a href="/justification">Lire la suite</a>
+                              </p>
+                            
+                          </div><!-- class="crd_actualite line" -->
+                        </li>
+                      
+                        <li>
+                        
+                          <div  class="crd_actualite line cls_Publication cls_Institutionnel cls_Science cls_Lagalaxieetaudela">
+                          
+                            <div class="attr_image">
+                              <!-- var/proj_marigo/storage/images/marigo//35387-1-fre-FR/rencontre-regionale-des-systemes-participatifs-de-garantie-spg-d-afrique-de-l-ouest-et-centrale_large.jpg -->
+                            </div>
+                            <h3 align="center">Définition</h3>
+                            <p class="attr_name">
+                              <a href="/definition">
+                              <span class="lig1">La plateforme multi acteur riz au Cameroun est un cadre de concertation des acteurs de différents maillons qui partagent la même vision de développement de la filière riz. </span>    </a>
+                            </p>
+                          
+                            <p class="attr_date_debut">
+                              23/05/2023 
+                            </p>
+                          
+                            <p class="attr_accroche">
+                              <p class="lien read_more">
+                                <a href="/definition">Lire la suite</a>
+                              </p>
+                            
+                    </div><!-- class="crd_actualite line" -->
+                        </li>
+                      
+                        <li>
+                        
+                          <div  class="crd_actualite line cls_Annonce cls_Institutionnel cls_Lagalaxieetaudela">
+                            <div class="attr_image">
+                            
+                              <!-- var/proj_marigo/storage/images/marigo//35269-1-fre-FR/visite-de-l-ambassadrice-de-l-union-europeenne-en-cote-d-ivoire-chez-des-producteurs-pilotes-du-projet-marigo_large.jpg -->
+                            
+                            </div>
+                          
+                      <h3 align="center">Utilité</h3>
+                      <p class="attr_name">
+                        <a href="/utilite">
+                        <span class="lig1">La plateforme multi acteur riz réunira les acteurs de cette filière riz et peut se comporter comme un groupe de pression au service de l’intérêt collectif.</span>    </a>
+                      </p>
+                    
+
+                      <p class="attr_date_debut">
+                        28/11/2022  
+                      </p>
+
+
+                      <p class="attr_accroche">
+                        <p class="lien read_more">
+                          <a href="/utilite">Lire la suite</a>
+                        </p>
+                      </p>
+                    </div>
+                        </li>
+                      
+                      </ul>
+                    
+                            <!-- DEUXIEME BLOC DES DESCRIPTIFS -->
+                      <ul class="actus">
+                        <li>
+                          <div  class="crd_actualite line cls_Publication cls_Institutionnel cls_Science cls_Lagalaxieetaudela">
+                            <div class="attr_image">     
+                              <!-- var/proj_marigo/storage/images/marigo//35492-1-fre-FR/mouches-des-fruits-quelles-innovations-agroecologiques-pour-la-lutte_large.jpg -->
+                            </div>
+                            <h3 align="center">Caractéristique</h3>
+                            <p class="attr_name">
+                              <a href="/caracteristique">
+                                <span class="lig1">La plateforme multi-acteur riz est d’abord composée d’une multiplicité d’acteurs, d’institutions et des idées. Elle est dotée d’un noyau de gestion où doivent être représentés tous les acteurs</span>    </a>
+                            </p>
+                          
+                            <p class="attr_date_debut">
+                              31/05/2023  
+                            </p>
+                          
+                            <p class="attr_accroche">
+                              <p class="lien read_more">
+                                <a href="/caracteristique">Lire la suite</a>
+                              </p>
+                            
+                          </div><!-- class="crd_actualite line" -->
+                        </li>
+                      
+                        <li>
+                        
+                          <div  class="crd_actualite line cls_Publication cls_Institutionnel cls_Science cls_Lagalaxieetaudela">
+                          
+                            <div class="attr_image">
+                              <!-- var/proj_marigo/storage/images/marigo//35387-1-fre-FR/rencontre-regionale-des-systemes-participatifs-de-garantie-spg-d-afrique-de-l-ouest-et-centrale_large.jpg -->
+                            </div>
+                            <h3 align="center">Objectif</h3>
+                            <p class="attr_name">
+                              <a href="/objectif">
+                              <span class="lig1">• Promouvoir de nouveaux partenariats entre ses membres, les autorités publiques et les partenaires au développement; Développer des synergies entre les familles d’acteurs membres </span>    </a>
+                            </p>
+                          
+                            <p class="attr_date_debut">
+                              23/05/2023 
+                            </p>
+                          
+                            <p class="attr_accroche">
+                              <p class="lien read_more">
+                                <a href="/objectif">Lire la suite</a>
+                              </p>
+                            
+                    </div><!-- class="crd_actualite line" -->
+                        </li>
+                      
+                        <li>
+                        
+                          <div  class="crd_actualite line cls_Annonce cls_Institutionnel cls_Lagalaxieetaudela">
+                            <div class="attr_image">
+                            
+                              <!-- var/proj_marigo/storage/images/marigo//35269-1-fre-FR/visite-de-l-ambassadrice-de-l-union-europeenne-en-cote-d-ivoire-chez-des-producteurs-pilotes-du-projet-marigo_large.jpg -->
+                            
+                            </div>
+                          
+                      <h3 align="center">Composition</h3>
+                      <p class="attr_name">
+                        <a href="/composition">
+                        <span class="lig1">  • Les membres de la plateforme multi-acteur peuvent provenir de la sphère purement privée c'est-à-dire des acteurs privés se situant au niveau micro de la filière.</span>    </a>
+                      </p>
+                    
+
+                      <p class="attr_date_debut">
+                        28/11/2022  
+                      </p>
+
+
+                      <p class="attr_accroche">
+                        <p class="lien read_more">
+                          <a href="/composition">Lire la suite</a>
+                        </p>
+                      </p>
+                    </div>
+                        </li>
+                      
+                      </ul>
+                    
+                            <!-- TROISIEME BLOC DES DESCRIPTIFS -->
+                      <ul class="actus">
+                        <li>
+                                <div  class="crd_actualite line cls_Publication cls_Institutionnel cls_Science cls_Lagalaxieetaudela">
+                                  <div class="attr_image">     
+                                    <!-- var/proj_marigo/storage/images/marigo//35492-1-fre-FR/mouches-des-fruits-quelles-innovations-agroecologiques-pour-la-lutte_large.jpg -->
+                                  </div>
+                                  <h3 align="center">Contraintes Besoins Atouts</h3>
+                                  <p class="attr_name">
+                                    <a href="/contrainte">
+                                      <span class="lig1">De manière globale, la riziculture camerounaise est confrontée à de nombreuses difficultés qui limitent ses performances : amélioration de la productivité des systèmes de production et la compétitivité des produits</span>    </a>
+                                  </p>
+                                
+                                  <p class="attr_date_debut">
+                                    31/05/2023  
+                                  </p>
+                                
+                                  <p class="attr_accroche">
+                                    <p class="lien read_more">
+                                      <a href="/contrainte">Lire la suite</a>
+                                    </p>
+                                  
+                                </div><!-- class="crd_actualite line" -->
+                        </li>
+
+                        <li>
+
+                                <div  class="crd_actualite line cls_Publication cls_Institutionnel cls_Science cls_Lagalaxieetaudela">
+                                
+                                  <div class="attr_image">
+                                    <!-- var/proj_marigo/storage/images/marigo//35387-1-fre-FR/rencontre-regionale-des-systemes-participatifs-de-garantie-spg-d-afrique-de-l-ouest-et-centrale_large.jpg -->
+                                  </div>
+                                  <h3 align="center">Resultat attendus</h3>
+                                  <p class="attr_name">
+                                    <a href="/resultat">
+                                    <span class="lig1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam magnam dolorem earum deserunt, expedita repellendus reprehenderit ab voluptatum quos nihil excepturi atque eos adipisci repellat. </span>    </a>
+                                  </p>
+                                
+                                  <p class="attr_date_debut">
+                                    23/05/2023 
+                                  </p>
+                                
+                                  <p class="attr_accroche">
+                                    <p class="lien read_more">
+                                      <a href="/resultat">Lire la suite</a>
+                                    </p>
+                                  
+                          </div><!-- class="crd_actualite line" -->
+                        </li>
+
+                        <li>
+
+                                <div  class="crd_actualite line cls_Annonce cls_Institutionnel cls_Lagalaxieetaudela">
+                                  <div class="attr_image">
+                                  
+                                    <!-- var/proj_marigo/storage/images/marigo//35269-1-fre-FR/visite-de-l-ambassadrice-de-l-union-europeenne-en-cote-d-ivoire-chez-des-producteurs-pilotes-du-projet-marigo_large.jpg -->
+                                  
+                                  </div>
+                                
+                            <h3 align="center">Zone d'intervention</h3>
+                            <p class="attr_name">
+                              <a href="/intervention">
+                              <span class="lig1">Le Cameroun, pays d’Afrique centrale situé au fond du golfe de Guinée, 475 442 km², se distingue par sa position stratégique, au carrefour de l’Afrique de l’Ouest et du Centre</span>    </a>
+                            </p>
+                          
+
+                            <p class="attr_date_debut">
+                              28/11/2022  
+                            </p>
+
+
+                            <p class="attr_accroche">
+                              <p class="lien read_more">
+                                <a href="/intervention">Lire la suite</a>
+                              </p>
+                            </p>
+                          </div>
+                        </li>
+
+                      </ul>
+                    
+                    </div>
+                  </div>
+                  <!-- Fin de la description ---------------------------------------------------------------------------------------------------------->
+
+
+                </div>
+                <!-- class="crd_dossier_actus embed" -->
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="bloc45">
+        <div class="Bloc45-1">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="attr_contenu4">
+              <h2>Cameroun : la culture du riz en transition générale</h2>
+              <div class="">
+                <div  class="crd_embedly embed">
+                  <div class="embedly_video">
+                    <iframe width="" height="" src="https://youtu.be/4gPZ5VLhhj8?t=0" autoplay="0" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                  </div>
+                </div><!-- class="crd_embedly embed" -->
+              </div>
+              <p>
+                Face à une production agricole à la fois trop coûteuse et trop faible au regard de la demande, les agricultrices et agriculteurs Camerounais misent sur la plateforme PFMA. Ils obtiennent déjà une production plus régulière, un sol plus riche et une grande diversité de cultures leur offre davantage de souplesse en matière de revenus. A leurs côtés, la PFMA Cameroun et ses partenaires sont engagés dans cette voie. Pour aller plus loin, dans le cadre du projet PFMA, et coordonné par le PFMA CAMEROUN, durant quatre ans, scientifiques, formateurs, producteurs et consommateurs vont mutualiser leurs connaissances et leurs savoir-faire.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+       
+  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+  </footer>
+  
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.bundle.min.js.map' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+  <script src="{% static 'js/script.js' %}"></script>
 </body>
+
 </html>
+

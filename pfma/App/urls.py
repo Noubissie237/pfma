@@ -4,8 +4,8 @@ from .views import *
 urlpatterns = [
     path('', home, name='home'),
     path('direct/', direct, name="Acteurs directs"),
-    path('indirect/', direct, name="Acteurs indirects"),
-    path('institutionnel/', direct, name="Acteurs institutionnels"),
+    path('indirect/', indirect, name="Acteurs indirects"),
+    path('institutionnel/', institutionnel, name="Acteurs institutionnels"),
     path('bibliotheque/', bibliotheque, name="bibliotheque"),
     path('caracteristique/', caracteristique, name="caracteristique"),
     path('composition/', composition, name="composition"),
