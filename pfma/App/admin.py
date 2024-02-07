@@ -32,6 +32,18 @@ class AdminOffreDemande(admin.ModelAdmin):
 class AdminActeurETPotentiel(admin.ModelAdmin):
     list_display = ('acteur', 'superficie_exploite', 'superficie_potentielle', 'production_actuelle', 'production_potentielle')
 
+class AdminDocuments(admin.ModelAdmin):
+    list_display = ('nom', 'fichier')
+
+class AdminImages(admin.ModelAdmin):
+    list_display = ('titre', 'image')
+
+class AdminLiens(admin.ModelAdmin):
+    list_display = ('titre', 'url')
+
+class AdminEvolutionRiz(admin.ModelAdmin):
+    list_display = ('annee', 'sud', 'est', 'ouest', 'littoral', 'sud_ouest', 'nord_ouest', 'adamaoua', 'nord', 'extreme_nord')
+
 admin.site.register(Users, AdminUsers)
 admin.site.register(Genre, AdminGenre)
 admin.site.register(Producteur, AdminProducteur)
@@ -42,3 +54,10 @@ admin.site.register(Vendeur, AdminVendeur)
 admin.site.register(Etablissement, AdminEtablissement)
 admin.site.register(OffreDemande, AdminOffreDemande)
 admin.site.register(ActeurEtPotentiel, AdminActeurETPotentiel)
+admin.site.register(Documents_sir, AdminDocuments)
+admin.site.register(Documents_bibliotheque, AdminDocuments)
+admin.site.register(Documents_Hand_in_Hand, AdminDocuments)
+admin.site.register(Images_Mediatheque, AdminImages)
+admin.site.register(Liens, AdminLiens)
+admin.site.register(EvolutionRiz, AdminEvolutionRiz)
+

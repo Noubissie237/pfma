@@ -12,12 +12,14 @@ def direct(request):
     transformateurs = Tranformateur.objects.all()
     importateurs = Importateur.objects.all()
     consommateurs = Consommateur.objects.all()
+    liens = Liens.objects.all()
 
     context = {
         'producteurs' : producteurs,
         'transformateurs' : transformateurs,
         'importateurs' : importateurs,
-        'consommateurs' : consommateurs
+        'consommateurs' : consommateurs,
+        'liens' : liens
     }
 
     return render(request, 'acteurs/direct.html', context={'data' : context})
@@ -25,10 +27,12 @@ def direct(request):
 def indirect(request):
     vendeurs = Vendeur.objects.all()
     etablissements = Etablissement.objects.all()
+    liens = Liens.objects.all()
 
     context = {
         'vendeurs' : vendeurs,
-        'etablissements' : etablissements
+        'etablissements' : etablissements,
+        'liens' : liens
     }
 
     return render(request, 'acteurs/indirect.html', context={'data' : context})
@@ -36,11 +40,15 @@ def indirect(request):
 def general(request):
     data = OffreDemande.objects.all()
     acteur_et_potentielle = ActeurEtPotentiel.objects.all()
+    documents = Documents_sir.objects.all()
+    liens = Liens.objects.all()
+
+
     sommeSuperficieExploite = 0
     sommeSuperficePotentielle = 0
     sommeProductionActuelle = 0
     sommeProductionPotentielle = 0
-    list_somme = []
+    
     for elt in acteur_et_potentielle:
         sommeSuperficieExploite += elt.superficie_exploite
         sommeSuperficePotentielle += elt.superficie_potentielle
@@ -56,15 +64,30 @@ def general(request):
         'sommeSuperficePotentielle' : sommeSuperficePotentielle,
         'sommeProductionActuelle' : sommeProductionActuelle,
         'sommeProductionPotentielle' : sommeProductionPotentielle,
+        'documents' : documents,
+        'liens' : liens
     }
 
     return render(request, 'sir/general.html', context={'data' : context})
 
 def institutionnel(request):
-    return render(request, 'acteurs/institutionnel.html')
+    liens = Liens.objects.all()
+
+    context = {
+        'liens' : liens
+    }
+    return render(request, 'acteurs/institutionnel.html', context={'data' : context})
 
 def bibliotheque(request):
-    return render(request, 'biblio/livreTechnique.html')
+
+    documents = Documents_bibliotheque.objects.all()
+    liens = Liens.objects.all()
+
+    context = {
+        'documents' : documents,
+        'liens' : liens
+    }
+    return render(request, 'biblio/livreTechnique.html', context={'data' : context})
 
 def caracteristique(request):
     return render(request, 'descriptifs/caracteristique.html')
@@ -94,17 +117,44 @@ def utilite(request):
     return render(request, 'descriptifs/utilite.html')
 
 def hand(request):
-    return render(request, 'hand/hand.html')
+    documents = Documents_Hand_in_Hand.objects.all()
+    liens = Liens.objects.all()
+
+    context = {
+        'documents' : documents,
+        'liens' : liens
+    }
+    return render(request, 'hand/hand.html', context={'data' : context})
 
 def commercial(request):
-    return render(request, 'sir/commercial.html')
+    liens = Liens.objects.all()
+    evolution = EvolutionRiz.objects.all()
+
+    context = {
+        'liens' : liens,
+        'evolution' : evolution
+    }
+    return render(request, 'sir/commercial.html', context={'data' : context})
 
 
 def technique(request):
-    return render(request, 'sir/technique.html')
+    liens = Liens.objects.all()
+
+    context = {
+        'liens' : liens
+    }
+
+    return render(request, 'sir/technique.html', context={'data' : context} )
 
 def mediatheque(request):
-    return render(request, 'mediatheque/mediatheque.html')
+    images = Images_Mediatheque.objects.all()
+    liens = Liens.objects.all()
+
+    context = {
+        'images' : images,
+        'liens' : liens
+    }
+    return render(request, 'mediatheque/mediatheque.html', context={'data' : context})
 
 def conference(request):
     return render(request, 'conference/index.html')

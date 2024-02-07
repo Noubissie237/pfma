@@ -29,7 +29,7 @@ class Users(models.Model):
 
 ############################## ACTEURS ##############################
         
-    ################# DIRECT #################
+################# DIRECT #################
 class Producteur(models.Model):
     region = models.CharField(max_length=100, null=True, blank=True)
     nom_op = models.CharField(max_length=250, null=True, blank=True)
@@ -48,8 +48,6 @@ class Producteur(models.Model):
         verbose_name_plural = ("Producteurs")
         db_table = "Producteur"
 
-
-
 class Tranformateur(models.Model):
     region = models.CharField(max_length=100, null=True, blank=True)
     nom_transformateur = models.CharField(max_length=250, null=True, blank=True)
@@ -66,8 +64,6 @@ class Tranformateur(models.Model):
         verbose_name = "Tranformateur"
         verbose_name_plural = ("Tranformateurs")
         db_table = "Tranformateur"
-
-
 
 class Importateur(models.Model):
     region = models.CharField(max_length=100, null=True, blank=True)
@@ -86,8 +82,6 @@ class Importateur(models.Model):
         verbose_name_plural = ("Importateurs")
         db_table = "Importateur"
 
-
-
 class Consommateur(models.Model):
     region = models.CharField(max_length=100, null=True, blank=True)
     nom_association = models.CharField(max_length=250, null=True, blank=True)
@@ -105,9 +99,7 @@ class Consommateur(models.Model):
 
 
 
-
-
-        ################# INDIRECT #################
+################# INDIRECT #################
 class Vendeur(models.Model):
     region = models.CharField(max_length=100, null=True, blank=True)
     nom_vendeur = models.CharField(max_length=250, null=True, blank=True)
@@ -124,7 +116,6 @@ class Vendeur(models.Model):
         verbose_name = "Vendeur"
         verbose_name_plural = ("Vendeurs")
         db_table = "Vendeur"
-
 
 class Etablissement(models.Model):
     region = models.CharField(max_length=100, null=True, blank=True)
@@ -143,9 +134,9 @@ class Etablissement(models.Model):
         db_table = "Etablissement"
 
 
-############################## ACTEURS ##############################
+############################## SIR ##############################
 
-    ################# GENERAL #################
+################# GENERAL #################
 
 class OffreDemande(models.Model):
     annee = models.IntegerField(null=True, blank=True)
@@ -180,5 +171,95 @@ class ActeurEtPotentiel(models.Model):
         verbose_name_plural = ("ActeurEtPotentiels")
         db_table = "ActeurEtPotentiel"
 
+class Documents_sir(models.Model):
+    nom = models.CharField(max_length=250)
+    fichier = models.FileField(upload_to="staticfiles/documents", max_length=100)
 
+    def __str__(self):
+        return self.nom
+    
+    class Meta:
+        verbose_name = "Documents_sir"
+        verbose_name_plural = "Documents_sir"
+        db_table = "Documents_sir"
+
+
+################# COMMERCIAL #################
+class EvolutionRiz(models.Model):
+    annee = models.IntegerField()
+    sud = models.IntegerField(null=True, blank=True)
+    centre = models.IntegerField(null=True, blank=True)
+    est = models.IntegerField(null=True, blank=True)
+    ouest = models.IntegerField(null=True, blank=True)
+    littoral = models.IntegerField(null=True, blank=True)
+    sud_ouest = models.IntegerField(null=True, blank=True)
+    nord_ouest = models.IntegerField(null=True, blank=True)
+    adamaoua = models.IntegerField(null=True, blank=True)
+    nord = models.IntegerField(null=True, blank=True)
+    extreme_nord = models.IntegerField(null=True, blank=True)
+
+    def __int__(self):
+        return self.annee
+    
+    class Meta:
+        verbose_name = "Evolution_Riz"
+        verbose_name_plural = "Evolution_Riz"
+        db_table = "Evolution_Riz"
+        
 ####################################################
+        
+############# Bibliotheque ############# 
+class Documents_bibliotheque(models.Model):
+    nom = models.CharField(max_length=250)
+    fichier = models.FileField(upload_to="staticfiles/documents", max_length=100)
+
+    def __str__(self):
+        return self.nom
+    
+    class Meta:
+        verbose_name = "Documents_bibliotheque"
+        verbose_name_plural = "Documents_bibliotheque"
+        db_table = "Documents_bibliotheque"
+
+
+############# Hand in Hand ############# 
+class Documents_Hand_in_Hand(models.Model):
+    nom = models.CharField(max_length=250)
+    fichier = models.FileField(upload_to="staticfiles/documents", max_length=100)
+
+    def __str__(self):
+        return self.nom
+    
+    class Meta:
+        verbose_name = "Documents_Hand_in_Hand"
+        verbose_name_plural = "Documents_Hand_in_Hand"
+        db_table = "Documents_Hand_in_Hand"
+
+
+############# Mediatheque ############# 
+class Images_Mediatheque(models.Model):
+    titre = models.CharField(max_length=250)
+    image = models.ImageField(upload_to="staticfiles/images", height_field=None, width_field=None, max_length=None)
+
+    def __str__(self):
+        return self.titre
+    
+    class Meta:
+        verbose_name = "Images_Mediatheque"
+        verbose_name_plural = "Images_Mediatheque"
+        db_table = "Images_Mediatheque"
+
+
+############# Liens ############# 
+class Liens(models.Model):
+    titre = models.CharField(max_length=250)
+    url = models.URLField(max_length=200)
+
+    def __str__(self):
+        return self.titre
+    
+    class Meta:
+        verbose_name = "Liens"
+        verbose_name_plural = "Liens"
+        db_table = "Liens"
+

@@ -97,7 +97,7 @@
           </li>
           
           <li class="pos_2 ">
-            <a href="">
+            <a href="/direct">
               <span class="lig1">ACTEURS</span>
             </a>
   
@@ -198,7 +198,7 @@
           </li>
   
           <li class="pos_5 pos_last ">
-            <a href="#" >Hand in Hand</a>
+            <a href="/hand" >Hand in Hand</a>
           </li>
   
         </ul>
@@ -369,60 +369,20 @@
 
                 <div  class="crd_page full">
                     <br><br><br>
-
                     <h3 class="attr_name" style="color : rgba(40,40,40,0.6)">
                       <span id="institutionnel">IMAGES</span>  
                     </h3><hr>
-                    
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card-header">
-                                <img src="{% static 'img/med1.jpg' %}" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <hr>
-
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card-header">
-                                <img src="{% static 'img/med2.jpg' %}" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <hr>
-
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card-header">
-                                <img src="{% static 'img/med3.jpg' %}" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <hr>
-
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card-header">
-                                <img src="{% static 'img/med4.jpg' %}" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <hr>
-
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card-header">
-                                <img src="{% static 'img/med5.jpg' %}" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <hr>
+                    {% for image in data.images %}          
+                      <div class="row">
+                          <div class="col-12">
+                              <div class="card-header">
+                                  <img src="{{ image.image.url }}" alt="{{ image.titre }}">
+                              </div>
+                          </div>
+                      </div>
+                      
+                      <hr>
+                    {% endfor %}
 
                 </div>
                 <!-- class="crd_page full" -->
@@ -452,12 +412,9 @@
                 <h3 class="text-primary px-5">Liens</h3>
                 <br><br> 
                 <ul>
-                  <li><a style="font-size: 15px;" href="https://www.cairn.info/revue-herodote-2008-4-page-156.htm">https://www.cairn.info/revue-herodote-2008-4-page-156.htm</a> </li> <br>
-                  <li><a style="font-size: 15px;" href="https://agritrade.cta.int/fr/Agriculture/Produits-de-base/Riz/Les-tendances-du-secteur-du-riz-en-Afrique-de-l-Ouest.html">https://agritrade.cta.int/fr/Agriculture/Produits-de-base/Riz/Les-tendances-du-secteur-du-riz-en-Afrique-de-l-Ouest.html</a> </li> <br>
-                  <li><a style="font-size: 15px;" href="https://www.planetoscope.com/cereales/192-production-de-riz-dans-le-monde.html">https://www.planetoscope.com/cereales/192-production-de-riz-dans-le-monde.html</a> </li> <br>
-                  <li><a style="font-size: 15px;" href="https://boowiki.info/template/wiki7_files/latest_003.png">BOOWIKI</a> </li> <br>
-                  <li><a style="font-size: 15px;" href="https://boowiki.info/art/le-commerce-international/riz-commerce.html">https://boowiki.info/art/le-commerce-international/riz-commerce.html</a> </li> <br>
-                  <li><a style="font-size: 15px;" href="https://agritrade.cta.int/fr/Agriculture/Produits-de-base/Riz">agritrade.cta</a> </li>
+                  {% for lien in data.liens %}
+                    <li><a style="font-size: 15px;" href="{{lien.url}}">{{ lien.titre }}</a> </li> <br>
+                  {% endfor %}
                 </ul>
               </div>
             </aside>
